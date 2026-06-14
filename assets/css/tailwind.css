@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    /* ตั้งค่าสีพื้นหลังและข้อความเริ่มต้น สำหรับ Light Mode และ Dark Mode */
+    body {
+        /* โหมดสว่าง: พื้นหลังขาว ตัวอักษรสีน้ำเงินเข้ม (primary) */
+        @apply bg-white text-primary transition-colors duration-500;
+    }
+    .dark body {
+        /* โหมดมืด: ใช้สีพื้นหลังและข้อความจาก Template ใหม่ */
+        @apply bg-surface-container-lowest text-on-surface;
+    }
+}
+
+
+/* app.css */
+
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.4s ease-out;
+}
+
+.page-enter-from {
+    opacity: 0;
+    transform: translateY(10px);
+    /* เลื่อนขึ้นเล็กน้อย */
+}
+
+.page-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+    /* เลื่อนขึ้นเล็กน้อย */
+}
+
+.technical-grid {
+    background-image: linear-gradient(to right, rgba(226, 232, 240, 0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(226, 232, 240, 0.4) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.portfolio-item-card {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* เอฟเฟกต์ยกตัวลอยและเปลี่ยนขอบเรืองแสงสีส้มเมื่อเมาส์ชี้สัมผัส ล้อกับดีไซน์ของ CoreDnaSection */
+
+.portfolio-item-card:hover {
+    transform: translateY(-5px);
+    background-color: #ffffff;
+    border-color: rgba(255, 137, 40, 0.4);
+    box-shadow: 0 15px 30px -10px rgba(15, 23, 42, 0.06), 0 0 20px -5px rgba(255, 137, 40, 0.04);
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}

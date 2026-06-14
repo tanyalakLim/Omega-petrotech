@@ -1,0 +1,332 @@
+{
+    "nav": {
+        "global_home": "Home",
+        "strategic_services": "About Us",
+        "market_insights": "Products",
+        "compliance": "Compliance",
+        "contact_us": "Contact Us"
+    },
+    "footer": {
+        "desc": "Empowering global energy systems through innovative logistics and strategic infrastructure solutions.",
+        "quick_links": "Quick Links",
+        "links": {
+            "products": "Products & Specifications",
+            "governance": "Organizational Framework",
+            "compliance": "Compliance Standards",
+            "roadmap": "Strategic Roadmap"
+        },
+        "global_presence": "Global Presence",
+        "locations": {
+            "me": { "label": "Middle East", "address": "Business Bay, Dubai, UAE" },
+            "sea": { "label": "Southeast Asia", "address": "Sukhumvit, Bangkok, Thailand" }
+        },
+        "contact_info": "Contact Info",
+        "terms": "Terms of Engagement",
+        "risk": "Risk Disclosure",
+        "copyright": "© 2026 Omega Petrotech. All Rights Reserved.",
+        "tag1": "Institutional Rigor",
+        "tag2": "Global Connectivity"
+    },
+    "home": {
+        "hero": {
+            "tag": "Institutional Energy Trading",
+            "title_part1": "Premium Energy",
+            "title_part2": "Global Standards",
+            "subtitle": "A global hub for premium energy products and clean energy, seamlessly connecting world-class suppliers to the high-growth markets of the Asia-Pacific and Indochina regions.",
+            "btn_primary": "Strategic Partnership",
+            "btn_secondary": "Operational Portfolio",
+            "stat_label_1": "Liquidity Facility (USD Backed)",
+            "stat_label_2": "Compliance Framework",
+            "stat_label_3": "Visionary Establishment"
+        },
+        "dna": {
+            "tag": "Corporate Identity & Core Value",
+            "title_part1": "Structuring",
+            "title_part2": "Global Excellence",
+            "quote": "\"A modern energy firm is more than just logistics—it is a network built on trust, compliance, and deep financial intelligence.\"",
+            "card1_title": "Financial Agility",
+            "card1_desc": "A robust trade finance facility up to USD 100,000,000 in strategic partnership with Tier-1 international banking institutions like Emirates NBD, ensuring seamless cross-border trade execution.",
+            "card2_title": "Regulatory & Quality Compliance",
+            "card2_desc": "Uncompromising focus on clean energy under Euro 5 standard products, backed by a rigorous corporate governance framework and strict risk mitigation systems.",
+            "card3_title": "Asset-Light Corporate Agility",
+            "card3_desc": "An highly flexible and adaptive multi-modal logistics management model that maximizes speed-to-market and distribution efficiency while operating free from heavy fixed-asset burdens."
+        },
+        "portfolio": {
+            "tag": "Our Product Portfolio | Premium Energy Solutions",
+            "title": "Premium Energy",
+            "title2": "Products",
+            "item1_title": "Ultra-Low Sulfur Diesel (Diesel EN590 10PPM)",
+            "item1_desc": "Premium Euro 5 automotive diesel with ultra-low sulfur, effectively reducing environmental emissions and PM 2.5.",
+            "item2_title": "Liquefied Natural Gas (LNG)",
+            "item2_desc": "Liquefied Natural Gas, a high-efficiency clean fuel powering industrial sectors toward long-term sustainable growth.",
+            "item3_title": "Alternative Renewable Energies",
+            "item3_desc": "Innovative renewable energy and alternative power solutions, driving the global transition toward Net Zero Carbon.",
+            "card_status": "Global Supply Capacity",
+            "card_title": "Trading Volume Growth",
+            "card_footer": "Product Specifications"
+        },
+        "roadmap": {
+            "tag": "Strategic Operational Roadmap | Growth Horizons",
+            "title": "Execution Timeline & Milestones",
+            "status": "Vision 2030: Premier International Energy Trading House",
+            "p0_date": "Present - Year 1",
+            "p0_title": "PHASE 0 : OFFSHORE TRADING",
+            "p0_subtitle": "Triangle Model.",
+            "p0_bullet1": "Direct Sourcing from Global Refineries (Singapore) via long-term contracts.",
+            "p0_bullet2": "High-Seas Title Transfer via Bill of Lading (B/L) Endorsements with 100% paper hedging.",
+            "p0_bullet3": "Immediate Delivery to End Buyers in Australia, Vietnam, and ASEAN (Target: 720,000 MT/year).",
+            "p0_bullet4": "Build Trading Track Record for Corporate Credibility.",
+            "p1_date": "Year 1 - Year 2",
+            "p1_title": "PHASE 1 : REGULATED LICENSE",
+            "p1_subtitle": "Fuel Trader Application.",
+            "p1_bullet1": "Fulfill Regulatory Criteria for Section 7 Fuel Trader License in Thailand (Ministry of Energy).",
+            "p1_bullet2": "Establish Leased Bonded Storage Tanks (Sriracha, Maptaphut) with asset-light compliance strategy.",
+            "p1_bullet3": "Prepare for Physical Discharge and Domestic Trading operations setup.",
+            "p2_date": "Year 3 Onwards",
+            "p2_title": "PHASE 2 : INDOCHINA EXPANSION",
+            "p2_subtitle": "Transit Trade & Domestic Wholesale.",
+            "p2_bullet1": "Capture B2B Wholesale Market in Thailand and Lao PDR (Lao state-owned enterprises & dominant importers).",
+            "p2_bullet2": "Expand Transit Trade to Lao PDR utilizing VAT 0% & Excise exemptions via $100M finance facility.",
+            "p2_bullet3": "Direct physical vessel discharge into bonded tanks for strategic distribution with strict KYC/AML screening.",
+            "p2_bullet4": "Supply Section 10 Jobbers and corporate industrial fleets.",
+            "enabler1_title": "USD 100 Million Cash-Backed Trade Finance Facility",
+            "enabler1_desc": "Strategic Partnership with Emirates NBD to support high-volume global transactions.",
+            "enabler2_title": "Strict Risk & Legal Compliance Architecture",
+            "enabler2_desc": "Integrated Matched-Hedging mechanisms alongside automated Sanctions Screening protocols."
+        },
+        "cta": {
+            "tag": "Contact & Core Information",
+            "title": "Access the Energy Corridor",
+            "subtitle": "We invite institutional partners, refiners, and logistics providers to engage with our strategic network as we redefine regional energy flows.",
+            "btn_primary": "Send Strategic Inquiry",
+            "btn_secondary": "Institutional Access"
+        }
+    },
+    "about": {
+        "overview": {
+            "tagline": "International Energy Trading House",
+            "title": "Omega Petrotech Co., Ltd.",
+            "desc_part1": "Established in",
+            "desc_year": "2025",
+            "desc_part2": "as an international trader of oil, natural gas, and renewable energy. It represents a powerful synergy of a highly qualified board of directors and executive team, rich with extensive experience and expertise in the energy industry and national compliance.",
+            "finance": {
+                "label": "Revolving Trade Finance Facility",
+                "desc": "Secured a strategic joint venture partnership with a leading capital group in Dubai, UAE. Driving financial stability through Tier-1 banks such as Emirates NBD and top-tier global financial institutions."
+            },
+            "sourcing": {
+                "title": "Sourcing Focus",
+                "desc": "Dedicated to procuring and distributing premium-grade energy products from world-class refineries and leading global suppliers.",
+                "items": {
+                    "diesel": "Diesel EN590 10PPM (European Standard)",
+                    "lng": "Liquefied Natural Gas (LNG)",
+                    "renewable": "Other Renewable Energies"
+                }
+            }
+        },
+        "vision_mission": {
+            "tagline": "Strategic Milestones",
+            "title": "Vision & Mission",
+            "vision_text": "To become a premier International Energy Trading House by 2030, seamlessly bridging world-class, Euro 5 standard clean energy supplies to the high-growth markets of the Asia-Pacific and Indochina regions.",
+            "m1_title": "Seamless Sourcing",
+            "m1_desc": "Operate and manage global supplies of petroleum, natural gas, and renewable energy to ensure long-term sustainability and seamless continuity.",
+            "m2_title": "Compliant Logistics",
+            "m2_desc": "Establish and elevate energy logistics and transportation networks that guarantee absolute transparency, maximum security, and full compliance with international regulatory standards.",
+            "m3_title": "Strategic Partnership",
+            "m3_desc": "Commit to serving as a highly reliable long-term offtake partner, driving shared value and mutual growth alongside world-class refineries and strategic partners."
+        },
+        "jv": {
+            "sectionTitle": "Strategic Alliance",
+            "mainHeading": "Joint Venture Structure",
+            "subHeading": "Formed by three groups of energy sector veterans entering into a joint venture agreement, establishing clear, systematic, and international divisions of roles and responsibilities.",
+            "cards": {
+                "bmi": {
+                    "title": "BMI International Co., Ltd.",
+                    "description": "Comprised of experts with extensive experience as oil procurement agents across the ASEAN region. Its executives also serve on the board of directors of major domestic energy supply and logistics corporations via both land and maritime routes.",
+                    "footerText": "Directly mitigates demurrage risks."
+                },
+                "jb1": {
+                    "title": "JB1 Group FZC",
+                    "description": "Established in a Free Trade Zone, with its headquarters located at Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, United Arab Emirates. Legally registered as an official oil trader.",
+                    "footerText": "Oil networks across Asia and Middle East."
+                },
+                "ept": {
+                    "title": "Eakorn Petroleum Co., Ltd.",
+                    "description": "Comprised of Thai and international business professionals with long-standing global investor networks. Features executives with profound experience in corporate and international law who have managed transnational oil trade operations.",
+                    "footerText": "Manages legal affairs and corporate compliance."
+                }
+            }
+        },
+        "org": {
+            "tag": "Organization Structure",
+            "companyName": "Omega Petrotech Co., Ltd.",
+            "legalStatus": "Organization Chart",
+            "structure": {
+                "president": "President",
+                "board": "Board of Directors"
+            },
+            "departments": {
+                "legal": {
+                    "title": "Legal & Compliance Dept."
+                },
+                "secretariat": {
+                    "title": "Corporate Secretariat"
+                }
+            },
+            "roles": {
+                "ceo": "Chief Executive Officer (CEO)"
+            },
+            "csuite": {
+                "cro": {
+                    "title": "Chief Risk Officer"
+                },
+                "cfo": {
+                    "title": "Chief Financial Officer"
+                },
+                "cpo": {
+                    "title": "Chief Procurement Officer"
+                },
+                "cao": {
+                    "title": "Chief Administrative Officer"
+                },
+                "cmo": {
+                    "title": "Chief Marketing Officer"
+                }
+            },
+            "pillars": {
+                "energy": "Energy",
+                "supply": "Supply",
+                "storage": "Storage",
+                "safety": "Safety",
+                "sustainability": "Sustainability"
+            }
+        }
+    },
+    "products": {
+        "tag": "Products & Sourcing",
+        "title": {
+            "part1": "Energy Products",
+            "part2": "& Transport Network"
+        },
+        "premium": {
+            "title": "Premium Energy Products",
+            "desc": "We specialize in the strategic sourcing and distribution of premium-grade energy products, meticulously selected from world-class producers and refineries to ensure maximum reliability and quality. Our portfolio includes:",
+            "diesel": {
+                "name": "Ultra-Low Sulfur Diesel (EN590 10PPM)",
+                "desc": "Premium Euro 5 automotive diesel with ultra-low sulfur, effectively reducing environmental emissions and PM 2.5."
+            },
+            "lng": {
+                "name": "Liquefied Natural Gas (LNG)",
+                "desc": "A high-efficiency clean fuel powering industrial sectors toward long-term sustainable growth."
+            },
+            "renewable": {
+                "name": "Alternative Renewable Energies",
+                "desc": "Innovative renewable energy and alternative power solutions, driving the global transition toward Net Zero Carbon."
+            }
+        },
+        "logistics": {
+            "title": "Supply Chain Network",
+            "desc": "We leverage a robust, interconnected global supply chain network designed for maximum efficiency, security, and strategic market penetration.",
+            "partners": {
+                "label": "Global Network",
+                "title": "Strategic Partners",
+                "desc": "Sourcing directly from world-class refineries and premier global commodity brokers, such as Vitol (Singapore), through 12-Month Term Contracts to guarantee continuous supply security.",
+                "note": "Cultivating long-term partnerships to guarantee global supply security and operational excellence."
+            },
+            "models": {
+                "label": "Operational Models",
+                "title": "Trading & Logistics Framework",
+                "offshore": {
+                    "time": "Phase 0",
+                    "name": "Offshore Trading",
+                    "desc": "Procuring refined petroleum products from international suppliers and executing immediate high-seas title transfers via Bill of Lading (B/L) endorsements directly to end buyers in Australia, Vietnam, and other ASEAN markets, without incurring local storage costs in Thailand in the early stage."
+                },
+                "transit": {
+                    "time": "Phase 1 & 2",
+                    "name": "Transit Trade to Indochina",
+                    "desc": "Transitioning to strategic customs-free storage zones (Bonded Marine Terminals) in key coastal hubs like Sriracha or Maptaphut to act as cross-border transit trading hubs for truck distribution into the Lao PDR under optimized tax structures."
+                },
+                "footer": "* Integrating oceanic sourcing with seamless cross-border transit networks."
+            }
+        }
+    },
+    "compliance": {
+        "tag": "Global Standards & Framework",
+        "title": { "part1": "Compliance Excellence", "part2": "& Strategic ESG" },
+        "compliance": {
+            "title": "Compliance Excellence & Enhanced CDD",
+            "desc": "Omega Petrotech Company Limited operates under a strict, Zero-Tolerance Compliance Architecture that aligns thoroughly with the Wolfsberg Principles and international Anti-Money Laundering (AML) standards.",
+            "cards": {
+                "sanctions": {
+                    "title": "Automated Sanctions Screening",
+                    "desc": "All counterparts and intermediaries must undergo rigorous automated screening against global watchlists.",
+                    "list": {
+                        "us": "United States Office of Foreign Assets Control (US OFAC)",
+                        "eu": "European Union Sanctions List",
+                        "un": "United Nations Security Council Resolutions (UNSCR)"
+                    }
+                },
+                "vessel": {
+                    "title": "Vessel Vetting Policy",
+                    "desc": "All tankers must clear strict procedures under the Ship Inspection Report Programme (SIRE).",
+                    "warning": "The Company enforces an absolute prohibition against vessels with a history of navigating sanctioned waters or those registered under high-risk Flags of Convenience."
+                }
+            }
+        },
+        "esg": {
+            "title": "ESG Integration & Sustainable Horizons",
+            "desc": "In alignment with global energy transition mandates, the Company’s long-term business framework strategically integrates decarbonization and sustainable development into its core operations.",
+            "cards": {
+                "immediate": {
+                    "label": "Immediate Mandate",
+                    "title": "Ultra-Low Sulfur Diesel",
+                    "desc": "100% of physical diesel trading operations are restricted exclusively to Ultra-Low Sulfur Diesel (Diesel EN590 10PPM).",
+                    "note": "This strategy actively reduces particulate matter (PM) and sulfur oxide (SOx) emissions along high-traffic logistics corridors across the ASEAN region."
+                },
+                "future": {
+                    "label": "Phase 2 Horizons",
+                    "title": "Future Carbon Offset Initiatives",
+                    "sub1": { "title": "Biofuel Blending", "desc": "Incorporating advanced biofuel blending programs (such as B10/B20) to support cleaner energy alternatives in the supply chain." },
+                    "sub2": { "title": "Renewable compliance", "desc": "Investing in utility-scale renewable energy compliance projects within the Western Economic Corridor (WEC) of Thailand." },
+                    "footer": "* Actively supporting the decarbonization objectives of upstream global supply partners."
+                }
+            }
+        }
+    },
+    "contact": {
+        "tag": "Global Partnerships",
+        "title": "Connect With Us",
+        "subtitle": "Establish a strategic partnership with Omega Petrotech. We invite global suppliers, buyers, and financial institutions to connect with our trading desk.",
+        "offices": {
+            "title": "Corporate Network"
+        },
+        "kyc": {
+            "title": "KYC Onboarding Portal",
+            "desc": "For prospective trading counterparties and financial institutions. Download our standard KYC & Due Diligence package to accelerate account opening.",
+            "button": "Download KYC Package"
+        },
+        "form": {
+            "title": "B2B Inquiry",
+            "desc": "Please select your inquiry type to route your message to the appropriate commercial desk.",
+            "fields": {
+                "type": {
+                    "label": "Nature of Inquiry",
+                    "placeholder": "Select business relationship type...",
+                    "options": {
+                        "supplier": "Product Offering (Supplier)",
+                        "buyer": "Product Procurement (Buyer)",
+                        "finance": "Financial / Banking Institution",
+                        "other": "General Corporate Inquiry"
+                    }
+                },
+                "company": "Company Name",
+                "name": "Contact Person",
+                "email": "Corporate Email",
+                "phone": "Phone Number",
+                "message": "Business Proposal / Message",
+                "messagePlaceholder": "Provide a brief overview of your proposal or requirements..."
+            },
+            "submit": "Submit Inquiry",
+            "privacy": "Your information is protected under our strict confidentiality policy."
+        }
+    }
+}

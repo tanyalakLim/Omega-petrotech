@@ -58,9 +58,9 @@
 
                     <div
                         class="w-full h-full min-h-[380px] lg:min-h-0 bg-slate-100 rounded-2xl overflow-hidden shadow-[0_20px_45px_-12px_rgba(15,23,42,0.08)] border border-slate-200/40 relative group/img">
-
-                        <img src="/images/cargo-logistics.jpg" alt="Premium Energy Products Supply Chain"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" />
+                        <NuxtImg src="/images/cargo-logistics.jpg" format="webp" preload
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
+                            alt="cargo logistics" />
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-primary/25 via-transparent to-transparent mix-blend-multiply">
                         </div>

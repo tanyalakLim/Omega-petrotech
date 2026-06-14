@@ -30,7 +30,7 @@
                     </span>
                     <span class="text-[10px] font-ibm-thai font-medium text-white uppercase tracking-[0.2em]">{{
                         $t('home.hero.tag')
-                        }}</span>
+                    }}</span>
                 </div>
 
                 <h1
@@ -46,15 +46,21 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button
-                        class="bg-secondary-container  font-ibm-thai text-white px-8 py-4 md:py-5 text-[11px] font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-3 rounded-xl shadow-xl shadow-secondary-container/20 w-full sm:w-auto">
-                        {{ $t('home.hero.btn_primary') }} <span
-                            class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </button>
-                    <button
-                        class="border border-white/20  font-ibm-thai text-white px-8 py-4 md:py-5 text-[11px] font-bold uppercase tracking-[0.1em] hover:bg-white/5 transition-all rounded-xl backdrop-blur-sm w-full sm:w-auto">
+                    <!-- ปุ่มหลัก: ติดต่อร่วมธุรกิจ -->
+                    <NuxtLink :to="localePath('/contact')"
+                        class="bg-secondary-container font-ibm-thai text-white px-8 py-4 md:py-5 text-[11px] font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-3 rounded-xl shadow-xl shadow-secondary-container/20 w-full sm:w-auto group">
+                        {{ $t('home.hero.btn_primary') }}
+                        <span
+                            class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">
+                            arrow_forward
+                        </span>
+                    </NuxtLink>
+
+                    <!-- ปุ่มรอง: เกี่ยวกับองค์กร -->
+                    <NuxtLink :to="localePath('/about')"
+                        class="border border-white/20 font-ibm-thai text-white px-8 py-4 md:py-5 text-[11px] font-bold uppercase tracking-[0.1em] hover:bg-white/5 transition-all rounded-xl backdrop-blur-sm w-full sm:w-auto flex items-center justify-center">
                         {{ $t('home.hero.btn_secondary') }}
-                    </button>
+                    </NuxtLink>
                 </div>
             </div>
 
@@ -92,6 +98,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
+const localePath = useLocalePath()
 </script>
 <style scoped>
 .scan-line {

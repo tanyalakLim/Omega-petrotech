@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-slate-50 text-slate-900 min-h-screen py-28 md:pb-28 pt-[180px] overflow-hidden relative">
+    <div class="bg-slate-50 text-slate-900 min-h-screen py-28 md:pb-28 md:pt-[180px] overflow-hidden relative">
 
         <!-- Background Elements -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">

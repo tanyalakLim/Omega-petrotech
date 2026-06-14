@@ -2,9 +2,10 @@
     <header ref="headerEl"
         class="font-ibm-thai fixed top-0 left-0 w-full z-[60] bg-white/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
         <nav class="flex justify-between items-center h-20 px-4 max-w-7xl mx-auto">
-            <div class="flex items-center gap-2">
-                <img src="/images/logo.png" class="h-8 md:h-9 w-auto object-contain">
-            </div>
+            <NuxtLink :to="localePath('/')"
+                class="flex items-center gap-2 cursor-pointer hover:opacity-90 transition-opacity">
+                <img src="/images/logo.png" class="h-8 md:h-9 w-auto object-contain" alt="Logo">
+            </NuxtLink>
 
             <div class="hidden md:flex items-center gap-6 lg:gap-10">
                 <NuxtLink v-for="menu in navigationMenus" :key="menu.to" :to="localePath(menu.to)"

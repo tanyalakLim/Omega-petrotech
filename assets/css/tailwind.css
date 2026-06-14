@@ -58,3 +58,45 @@
     transform: translateY(1.5rem);
     transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+
+/* CHROME */
+
+
+/* This part changes the scrollbar track (the part behind the scrollbar) */
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    /* Dark grey color, you can choose any color you like */
+}
+
+
+/* This part changes the scrollbar handle */
+
+::-webkit-scrollbar-thumb {
+    background: #cdd4df;
+    /* Medium grey color, this is the actual scrollbar */
+    border-radius: 8px;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+}
+
+
+/* You can also change the scrollbar width and height */
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the vertical scrollbar */
+    height: 10px;
+    /* Height of the horizontal scrollbar */
+}
+
+
+/* Firefox */
+
+.scrollable-element {
+    scrollbar-width: thin;
+    /* color takes two values: thumb color and track color */
+    scrollbar-color: #0A1219 #94a3b8;
+}

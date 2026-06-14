@@ -19,8 +19,6 @@
 * **Icons:** Google Material Symbols
 
 ## 📂 Folder Structure (โครงสร้างไฟล์เบื้องต้น)
-
-```text
 ├── components/       # UI Components ต่างๆ ที่ใช้ซ้ำได้ (เช่น Card, Button)
 ├── layouts/          # โครงสร้างหน้าเว็บหลัก (เช่น Header, Footer)
 ├── pages/            # หน้าเว็บแต่ละหน้า (Home, Products, Contact ฯลฯ)
@@ -66,4 +64,46 @@ yarn install
 # bun
 bun install
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Development Server
+Start the development server on `http://localhost:3000`:
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+
+## Production
+Build the application for production:
+
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+
+
+Locally preview production build:
+
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview

@@ -28,11 +28,10 @@
                             class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span>
                     </span>
-                    <span class="text-[10px] font-ibm-thai font-medium text-white uppercase tracking-[0.2em]">{{
+                    <span class="text-[10px] font-ibm-thai font-medium text-white uppercase tracking-[0.2em] th:tracking-widest">{{
                         $t('home.hero.tag')
                     }}</span>
                 </div>
-
                 <h1
                     class="text-4xl md:text-5xl lg:text-6xl leading-[1.2] font-bold text-white mb-6 tracking-tight font-ibm-thai">
                     {{ $t('home.hero.title_part1') }}
@@ -48,7 +47,7 @@
                 <div class="flex flex-col sm:flex-row gap-4">
                     <!-- ปุ่มหลัก: ติดต่อร่วมธุรกิจ -->
                     <NuxtLink :to="localePath('/contact')"
-                        class="bg-secondary-container font-ibm-thai text-white px-8 py-4 md:py-5 text-[11px] font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-3 rounded-xl shadow-xl shadow-secondary-container/20 w-full sm:w-auto group">
+                        class="bg-secondary-container font-ibm-thai text-white px-8 py-4 md:py-5 text-xs font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-3 rounded-xl shadow-xl shadow-secondary-container/20 w-full sm:w-auto group">
                         {{ $t('home.hero.btn_primary') }}
                         <span
                             class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">
@@ -58,7 +57,7 @@
 
                     <!-- ปุ่มรอง: เกี่ยวกับองค์กร -->
                     <NuxtLink :to="localePath('/about')"
-                        class="border border-white/20 font-ibm-thai text-white px-8 py-4 md:py-5 text-[11px] font-bold uppercase tracking-[0.1em] hover:bg-white/5 transition-all rounded-xl backdrop-blur-sm w-full sm:w-auto flex items-center justify-center">
+                        class="border border-white/20 font-ibm-thai text-white px-8 py-4 md:py-5 text-xs font-bold uppercase tracking-[0.1em] hover:bg-white/5 transition-all rounded-xl backdrop-blur-sm w-full sm:w-auto flex items-center justify-center">
                         {{ $t('home.hero.btn_secondary') }}
                     </NuxtLink>
                 </div>
@@ -71,7 +70,7 @@
                     <div class="scan-line"></div>
                     <div class="space-y-8">
                         <div>
-                            <div class="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em] mb-2">{{
+                            <div class="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em] th:tracking-widest mb-2">{{
                                 $t('home.hero.stat_label_1') }}</div>
                             <div class="text-4xl font-mono text-white">100M<span
                                     class="text-secondary-container text-lg">+</span></div>

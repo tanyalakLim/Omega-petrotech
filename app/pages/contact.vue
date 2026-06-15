@@ -21,29 +21,8 @@
 
         <div class="max-w-container-max mx-auto px-6 xl:px-margin-desktop relative z-10">
 
-            <!-- Page Header -->
-            <div class="max-w-3xl mx-auto text-center space-y-6 mb-16 md:mb-20">
-                <div
-                    class="inline-flex items-center gap-3 mb-4 bg-white/70 border border-white/10 px-4 py-2 rounded-full">
-                    <span class="relative flex h-2 w-2">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span>
-                    </span>
-                    <span
-                        class="text-[12px] font-ibm-thai font-medium text-secondary-container uppercase tracking-[0.2em]">
-                        {{ $t('contact.tag') }}
-                    </span>
-                </div>
-                <h2
-                    class="text-3xl font-ibm-thai leading-[1.4] md:text-5xl font-extrabold text-primary tracking-tight scroll-reveal">
-                    {{ $t('contact.title') }}
-                </h2>
-
-                <p class="text-lg text-slate-600 max-w-2xl mx-auto scroll-reveal">
-                    {{ $t('contact.subtitle') }}
-                </p>
-            </div>
+            <UiSectionHeader :tag="$t('contact.tag')" :title="$t('contact.title')" :desc="$t('contact.subtitle')"
+                as="h1" />
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
@@ -144,7 +123,7 @@
                                     <select
                                         class="w-full bg-slate-50 border border-slate-200 text-slate-700 rounded-xl px-4 py-3.5 appearance-none focus:outline-none focus:ring-2 focus:ring-secondary-container/50 focus:border-secondary-container transition-all">
                                         <option value="" disabled selected>{{ $t('contact.form.fields.type.placeholder')
-                                            }}</option>
+                                        }}</option>
                                         <option value="supplier">{{ $t('contact.form.fields.type.options.supplier') }}
                                         </option>
                                         <option value="buyer">{{ $t('contact.form.fields.type.options.buyer') }}

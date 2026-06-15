@@ -44,33 +44,9 @@
         <div class="max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10">
 
             <!-- ─── 1. ส่วนแนะนำตัวตรงกลาง (Center Focus Intro) ─── -->
-            <div class="max-w-3xl mx-auto text-center space-y-6 mb-16 md:mb-20">
-                <!-- Tagline -->
-
-                <div
-                    class="inline-flex items-center gap-3 mb-4 bg-white/70 border border-white/10 px-4 py-2 rounded-full">
-                    <span class="relative flex h-2 w-2">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span>
-                    </span>
-                    <span
-                        class="text-[12px] font-ibm-thai font-medium text-secondary-container uppercase tracking-[0.2em]">{{
-                            $t('about.overview.tagline') }}</span>
-                </div>
-
-                <!-- Company Name -->
-                <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-950 leading-tight">
-                    {{ $t('about.overview.title') }}
-                </h1>
-
-                <!-- Description -->
-                <p class="text-base md:text-lg text-slate-600 leading-relaxed font-light mx-auto">
-                    {{ $t('about.overview.desc_part1') }}
-                    <span class="font-medium text-slate-950">{{ $t('about.overview.desc_year') }}</span>
-                    {{ $t('about.overview.desc_part2') }}
-                </p>
-            </div>
+            <UiSectionHeader :tag="$t('about.overview.tagline')" :title="$t('about.overview.title')"
+                :desc="$t('about.overview.desc_part1') + $t('about.overview.desc_year') + $t('about.overview.desc_part2')"
+                as="h1" />
 
             <!-- ─── 2. ส่วนกล่องข้อมูล Bento Box (Grid Layout) ─── -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">

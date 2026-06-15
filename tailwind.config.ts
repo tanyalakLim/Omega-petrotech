@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
 export default <Partial<Config>>{
   darkMode: 'class',
@@ -35,13 +36,14 @@ export default <Partial<Config>>{
         "container-max": "1440px"
       },
       fontFamily: {
-        "headline-lg": ["IBM Plex Sans Thai", "sans-serif"],
-        "display-lg": [ "IBM Plex Sans Thai", "sans-serif"],
-        "body-md": ["IBM Plex Sans Thai", "sans-serif"],
-        "title-md": [ "IBM Plex Sans Thai", "sans-serif"],
-        "label-sm": [ "IBM Plex Sans Thai", "sans-serif"],
         "ibm-thai": ["IBM Plex Sans Thai", "sans-serif"],
       }
     }
-  }
+  },
+  plugins: [
+    plugin(function({ addVariant }) {
+      // สร้าง variant th: สำหรับตรวจสอบภาษาไทย
+      addVariant('th', 'html[lang="th"] &')
+    })
+  ]
 }

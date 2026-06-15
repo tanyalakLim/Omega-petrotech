@@ -10,12 +10,9 @@
     </div>
 
     <div class="max-w-4xl mx-auto px-6 xl:px-margin-desktop text-center relative z-10 scroll-reveal">
-      <div
-        class="inline-flex items-center gap-2 mb-6 md:mb-8 bg-slate-50 border border-outline-variant/30 px-6 py-2 rounded-full">
-        <span class="text-[12px] font-bold text-secondary-container uppercase tracking-[0.2em]">{{ $t('home.cta.tag')
-          }}</span>
-      </div>
-      <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6 md:mb-10 tracking-tight">{{ $t('home.cta.title') }}
+      <UiBaseTag :text="$t('home.cta.tag')" />
+
+      <h2 class="text-3xl md:text-5xl font-bold text-primary my-6 md:mb-10 tracking-tight">{{ $t('home.cta.title') }}
       </h2>
       <p
         class="text-on-surface-variant text-base md:text-xl font-light mb-10 md:mb-16 leading-relaxed max-w-3xl mx-auto">

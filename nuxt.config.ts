@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         { rel: 'canonical', href: 'https://www.omegapetrotech.com' }, // ใส่ URL เว็บไซต์จริงของคุณ
         { 
           rel: 'stylesheet', 
-          href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Hanken+Grotesk:wght@300;400;600&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap' 
+          href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap' 
         }
       ]
     }

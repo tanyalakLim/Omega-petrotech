@@ -28,7 +28,7 @@
         </div>
 
         <div class="col-span-1 md:col-span-2">
-          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] mb-6 md:mb-10">
+          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
             {{ $t('footer.quick_links') }}
           </h5>
           <client-only>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="col-span-1 md:col-span-2">
-          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] mb-6 md:mb-10">
+          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
             {{ $t('footer.global_presence') }}
           </h5>
           <ul class="space-y-5">
@@ -67,7 +67,7 @@
         </div>
 
         <div class="col-span-1 sm:col-span-2 md:col-span-3">
-          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] mb-6 md:mb-10">
+          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
             {{ $t('footer.contact_info') }}
           </h5>
           <ul class="space-y-3.5">
@@ -98,8 +98,8 @@
           {{ $t('footer.copyright') }}
         </p>
         <div class="flex gap-6 lg:gap-12">
-          <p class="text-[9px] text-white/20 uppercase tracking-[0.2em]">{{ $t('footer.tag1') }}</p>
-          <p class="text-[9px] text-white/20 uppercase tracking-[0.2em]">{{ $t('footer.tag2') }}</p>
+          <p class="text-[9px] text-white/20 uppercase tracking-[0.2em] th:tracking-widest">{{ $t('footer.tag1') }}</p>
+          <p class="text-[9px] text-white/20 uppercase tracking-[0.2em] th:tracking-widest">{{ $t('footer.tag2') }}</p>
         </div>
       </div>
 

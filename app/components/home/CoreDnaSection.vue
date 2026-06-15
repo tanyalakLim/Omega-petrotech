@@ -18,7 +18,7 @@
                     <div class="flex items-center gap-4 mb-4 md:mb-6">
                         <div class="w-12 h-[2px] bg-secondary-container"></div>
                         <span
-                            class="text-[11px] font-bold font-ibm-thai text-on-surface-variant uppercase tracking-[0.2em] block">
+                            class="text-[11px] font-bold font-ibm-thai text-on-surface-variant uppercase tracking-[0.2em] th:tracking-widest block">
                             {{ $t('home.dna.tag') }}
                         </span>
                     </div>
@@ -77,7 +77,7 @@
                         <!-- ปุ่มกดศึกษาข้อมูลเพิ่มเติม ลิงก์ไปหน้า Compliance -->
                         <NuxtLink to="/compliance"
                             class="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-primary/60 group-hover:text-secondary-container transition-colors duration-300">
-                            <span>Learn More</span>
+                            <span> {{ $t(`home.dna.more`) }}</span>
                             <span
                                 class="material-symbols-outlined text-xs transition-transform duration-300 group-hover:translate-x-1">
                                 arrow_forward

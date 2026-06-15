@@ -14,7 +14,7 @@
                     <div class="flex items-center gap-4 mb-4 md:mb-6">
                         <div class="w-12 h-[2px] bg-secondary-container"></div>
                         <span
-                            class="text-[11px] font-bold font-ibm-thai text-on-surface-variant uppercase tracking-[0.2em] block">
+                            class="text-[11px] font-bold font-ibm-thai text-on-surface-variant uppercase tracking-[0.2em] th:tracking-widest block">
                             {{ $t('home.portfolio.tag') }}
                         </span>
                     </div>
@@ -73,7 +73,7 @@
                                     <span class="material-symbols-outlined text-white text-sm">bar_chart</span>
                                 </div>
                                 <div>
-                                    <div class="text-[8px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                                    <div class="text-[8px] font-black text-slate-400 uppercase tracking-[0.2em] th:tracking-widest">
                                         {{ $t('home.portfolio.card_status') }}
                                     </div>
                                     <div class="text-xs font-bold text-primary tracking-tight mt-0.5">

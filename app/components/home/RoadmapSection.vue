@@ -10,10 +10,10 @@
       
       <!-- ส่วนหัวข้อกลางเซกชัน (ปรับฟอนต์และช่องไฟให้หรูหราขึ้น) -->
       <div class="text-center max-w-3xl mx-auto mb-20 md:mb-28 scroll-reveal">
-        <span class="text-[11px] font-bold text-secondary-container uppercase tracking-[0.2em] mb-4 block animate-pulse">
+        <span class="text-[11px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-4 block animate-pulse">
           {{ $t('home.roadmap.tag') }}
         </span>
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-4 font-headline-lg bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70 tracking-tight leading-normal py-2">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70 tracking-tight leading-normal py-2">
         {{ $t('home.roadmap.title') }}
         </h2>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">

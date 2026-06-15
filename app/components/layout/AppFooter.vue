@@ -94,7 +94,7 @@
 
       <div
         class="pt-8 md:pt-12 border-t border-white/5 flex flex-col-reverse md:flex-row justify-between items-center gap-6 text-center md:text-left">
-        <p class="text-[9px] text-white/20 uppercase tracking-[0.3em] md:tracking-[0.5em] leading-relaxed">
+        <p class="text-[9px] text-white/20 uppercase tracking-[0.3em] th:tracking-widest md:tracking-[0.5em] leading-relaxed">
           {{ $t('footer.copyright') }}
         </p>
         <div class="flex gap-6 lg:gap-12">

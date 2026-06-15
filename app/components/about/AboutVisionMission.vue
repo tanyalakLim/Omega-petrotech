@@ -4,7 +4,7 @@
 
             <!-- Header -->
             <div class="text-center mb-20 font-ibm-thai">
-                <h3 class="text-secondary-container font-bold tracking-[0.3em] uppercase text-sm mb-3">
+                <h3 class="text-secondary-container font-bold tracking-[0.3em] th:tracking-widest uppercase text-sm mb-3">
                     {{ $t('about.vision_mission.tagline') }}
                 </h3>
 
@@ -70,7 +70,7 @@
                         <div class="inline-flex items-center gap-4 mb-8">
                             <span class="w-10 h-px bg-secondary-container/80"></span>
                             <span class="text-secondary-container uppercase tracking-[0.25em] text-xs font-bold">
-                                Vision 2030
+                                {{$t('about.vision_mission.header') }}
                             </span>
                         </div>
 

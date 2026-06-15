@@ -8,7 +8,7 @@
             
             <!-- Header Section -->
             <div class="text-center space-y-6 mb-16 md:mb-20">
-                <h3 class="text-secondary-container font-bold tracking-[0.3em] uppercase text-sm mb-3">
+                <h3 class="text-secondary-container font-bold tracking-[0.3em] th:tracking-widest uppercase text-sm mb-3">
                    {{ t('about.jv.sectionTitle') }}
                 </h3>
                 <h2 class="text-3xl md:text-5xl font-black text-slate-950 mb-6 leading-tight scroll-reveal">

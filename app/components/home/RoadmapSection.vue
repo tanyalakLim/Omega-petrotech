@@ -86,11 +86,8 @@
         </div>
       </div>
 
-      <!-- ส่วนโครงสร้างฐานรากขับเคลื่อน (Strategic Enablers) ปรับให้เป็นระเบียบ เรียบหรูดูแพง -->
+      <!-- ส่วนโครงสร้างฐานรากขับเคลื่อน (Strategic Enablers)  -->
       <div class="max-w-5xl mx-auto pt-12 border-t border-white/[0.08] scroll-reveal" style="transition-delay: 400ms;">
-        <p class="text-center text-[10px] uppercase tracking-[0.3em] text-white/30 mb-8 font-semibold">
-          Core Foundation Platforms
-        </p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- กล่องที่ 1: Trade Finance -->

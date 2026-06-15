@@ -15,7 +15,7 @@
 
             <div class="text-center max-w-3xl mx-auto mb-24 scroll-reveal">
                 <span
-                    class="text-[11px] font-bold text-secondary-container uppercase tracking-[0.3em] mb-6 block animate-pulse">
+                    class="text-[11px] font-bold text-secondary-container uppercase tracking-[0.3em] th:tracking-widest mb-6 block animate-pulse">
                     {{ t('about.org.tag') }}
                 </span>
                 <h2

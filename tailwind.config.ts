@@ -22,7 +22,8 @@ export default <Partial<Config>>{
         "outline-variant": "#cbd5e1",
         "on-surface": "#0f172a",
         "on-surface-variant": "#475569",
-        "hero-overlay": "rgba(0, 23, 54, 0.85)"
+        "hero-overlay": "rgba(0, 23, 54, 0.85)",
+        "surface-container-lowest": "#f8fafc",
       },
       borderRadius: {
         "DEFAULT": "0.5rem",
@@ -37,6 +38,7 @@ export default <Partial<Config>>{
       },
       fontFamily: {
         "ibm-thai": ["IBM Plex Sans Thai", "sans-serif"],
+        "google-thai": ["Google Sans", "sans-serif"],
       }
     }
   },

@@ -1,44 +1,77 @@
 <template>
-  <div class="max-w-3xl mx-auto text-center space-y-6 mb-16">
-    <UiBaseTag v-if="tag" :text="tag" />
+  <div
+    class="mx-auto mb-16 max-w-3xl space-y-6 text-center"
+  >
+    <!-- Tag -->
+    <UiBaseTag
+      v-if="tag"
+      :text="tag"
+    />
 
-    <component 
-      :is="as" 
-      class="text-3xl font-ibm-thai leading-[1.4] md:text-5xl font-extrabold tracking-tight scroll-reveal"
-      :class="as === 'h1' ? 'font-black text-slate-950' : 'text-primary'"
+    <!-- Title -->
+    <component
+      :is="as"
+      class="scroll-reveal grid gap-2 font-ibm-thai text-3xl font-bold tracking-tight transition-colors duration-300 md:text-5xl"
+      :class="headingClass"
     >
-      <template v-for="(part, index) in formattedTitle" :key="index">
-        <br v-if="index > 0" class="hidden sm:inline" />
-        
-        <span :class="index > 0 ? 'block sm:inline text-primary/80 sm:pt-0 lg:pt-2' : ''">
+      <template
+        v-for="(part, index) in formattedTitle"
+        :key="index"
+      >
+        <span
+          :class="
+            index > 0
+              ? 'block text-primary/80 dark:text-slate-300/80'
+              : ''
+          "
+        >
           {{ part }}
         </span>
       </template>
     </component>
 
-    <p v-if="desc" class="text-base md:text-lg text-slate-600 leading-relaxed font-light mx-auto">
+    <!-- Description -->
+    <p
+      v-if="desc"
+      class="mx-auto text-base font-light leading-relaxed text-slate-600 transition-colors duration-300 dark:text-slate-300 md:text-lg"
+    >
       {{ desc }}
     </p>
-    
-    <div v-else class="w-20 h-1 bg-gradient-to-r from-transparent via-secondary-container to-transparent mx-auto rounded-full mb-12"></div>
+
+    <!-- Divider -->
+    <div
+      v-else
+      class="mx-auto mb-12 h-1 w-20 rounded-full bg-gradient-to-r from-transparent via-secondary-container to-transparent opacity-90 dark:opacity-100"
+    ></div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 
-// กำหนด Props รองรับ Data Type ที่ยืดหยุ่น
-const props = withDefaults(defineProps<{
-  tag?: string
-  title: string | string[] // รองรับทั้งแบบ String เดี่ยว หรือ Array ['Part1', 'Part2', 'Part3']
-  desc?: string            // ตัวเลือกเสริม (Optional)
-  as?: 'h1' | 'h2'         // กำหนดประเภทแท็ก (เริ่มต้นเป็น h2)
-}>(), {
-  as: 'h2'
+const props = withDefaults(
+  defineProps<{
+    tag?: string
+    title: string | string[]
+    desc?: string
+    as?: 'h1' | 'h2'
+  }>(),
+  {
+    as: 'h2'
+  }
+)
+
+const formattedTitle = computed(() => {
+  return Array.isArray(props.title)
+    ? props.title
+    : [props.title]
 })
 
-// ตัวแปลงข้อมูล (Computed): เปลี่ยน title ให้เป็น Array เสมอเพื่อให้วนลูปแสดงผลตามจำนวน Part ได้
-const formattedTitle = computed(() => {
-  return Array.isArray(props.title) ? props.title : [props.title]
+const headingClass = computed(() => {
+  if (props.as === 'h1') {
+    return 'font-black text-slate-950 dark:text-white'
+  }
+
+  return 'text-primary dark:text-slate-100'
 })
 </script>

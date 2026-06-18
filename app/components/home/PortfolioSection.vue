@@ -1,136 +1,435 @@
 <template>
-    <section class="py-20 md:py-28 bg-white text-primary overflow-hidden relative">
+  <section
+    class="relative overflow-hidden bg-white py-20 text-primary
+           transition-colors duration-500
+           dark:bg-[#070b14] dark:text-slate-100
+           md:py-28
+           border-b border-slate-100/90
+           dark:border-white/[0.06]"
+  >
+    <!-- Background Ambient -->
+    <div
+      class="pointer-events-none absolute left-0 top-1/3
+             h-[500px] w-[500px] rounded-full
+             bg-blue-500/[0.02] blur-[120px]
+             dark:bg-blue-500/[0.08]"
+      aria-hidden="true"
+    ></div>
+
+    <div
+      class="pointer-events-none absolute bottom-1/4 right-0
+             h-[400px] w-[400px] rounded-full
+             bg-secondary-container/5 blur-[100px]
+             dark:bg-orange-500/[0.07]"
+      aria-hidden="true"
+    ></div>
+
+
+    <!-- Dark Mode Technical Grid -->
+    <div
+      class="pointer-events-none absolute inset-0 hidden opacity-[0.16]
+             bg-[linear-gradient(to_right,rgba(100,116,139,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(100,116,139,0.08)_1px,transparent_1px)]
+             [background-size:44px_44px]
+             dark:block"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Dark Mode Vignette -->
+    <div
+      class="pointer-events-none absolute inset-0 hidden
+             bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(2,6,23,0.50)_100%)]
+             dark:block"
+      aria-hidden="true"
+    ></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-4">
+      <div
+        class="grid grid-cols-12 items-stretch gap-8 lg:gap-16"
+      >
+        <!-- Left Content -->
         <div
-            class="absolute top-1/3 left-0 w-[500px] h-[500px] bg-blue-500/[0.02] rounded-full blur-[120px] pointer-events-none">
+          class="scroll-reveal row col-span-12 flex flex-col
+                 justify-center lg:col-span-6"
+        >
+          <!-- Tag -->
+          <div class="mb-4 flex items-center gap-4 md:mb-6">
+            <div
+              class="h-[2px] w-12 bg-secondary-container
+                     dark:bg-orange-400"
+            ></div>
+
+            <span
+              class="block font-ibm-thai text-[11px] font-bold
+                     uppercase tracking-[0.2em]
+                     text-secondary-container
+                     transition-colors duration-300
+                     th:tracking-widest
+                     dark:text-slate-400"
+            >
+              {{ $t('home.portfolio.tag') }}
+            </span>
+          </div>
+
+          <!-- Title -->
+          <h2
+            class="mb-10 font-ibm-thai text-3xl font-extrabold
+                   leading-tight tracking-tight text-primary
+                   transition-colors duration-300
+                   dark:text-white
+                   md:mb-14 md:text-5xl"
+          >
+            {{ $t('home.portfolio.title') }}
+
+            <br class="hidden sm:inline">
+
+            <span class="block sm:pt-0 lg:pt-2">
+              <span
+                class="block text-primary/80
+                       transition-colors duration-300
+                       dark:text-slate-300 sm:inline"
+              >
+                {{ $t('home.portfolio.title2') }}
+              </span>
+            </span>
+          </h2>
+
+          <!-- Portfolio Items -->
+          <div class="space-y-4 md:space-y-5">
+            <article
+              v-for="item in portfolioItems"
+              :key="item.id"
+              class="portfolio-item-card group relative cursor-pointer
+                     overflow-hidden rounded-2xl border
+                     border-slate-300/70 bg-[#f8fafc] p-6
+                     transition-all duration-500
+
+                     hover:border-secondary-container/50
+
+                     dark:border-slate-700/60
+                     dark:bg-[#0b1220]
+                     dark:hover:border-orange-400/30
+                     dark:hover:bg-[#0e1829]"
+            >
+              <!-- Hover Gradient -->
+              <div
+                class="pointer-events-none absolute inset-0
+                       bg-gradient-to-r
+                       from-secondary-container/[0.04]
+                       to-transparent opacity-0
+                       transition-opacity duration-500
+                       group-hover:opacity-100
+
+                       dark:from-orange-400/[0.065]
+                       dark:via-blue-500/[0.025]
+                       dark:to-transparent"
+                aria-hidden="true"
+              ></div>
+
+              <!-- Dark Top Highlight -->
+              <div
+                class="pointer-events-none absolute inset-x-8 top-0
+                       hidden h-px bg-gradient-to-r
+                       from-transparent via-blue-400/20
+                       to-transparent dark:block"
+                aria-hidden="true"
+              ></div>
+
+              <div
+                class="relative z-10 mb-1 flex items-start
+                       justify-between gap-4"
+              >
+                <h4
+                  class="font-ibm-thai text-base font-bold
+                         text-primary transition-colors duration-300
+                         group-hover:text-secondary-container
+
+                         dark:text-slate-50
+                         dark:group-hover:text-orange-400
+
+                         md:text-lg"
+                >
+                  {{ $t(item.titleKey) }}
+                </h4>
+
+                <!-- Icon -->
+                <div
+                  class="flex h-8 w-8 shrink-0 items-center
+                         justify-center rounded-lg bg-slate-100
+                         text-primary/60 transition-all duration-500
+
+                         group-hover:bg-secondary-container
+                         group-hover:text-white
+
+                         dark:border dark:border-slate-700/70
+                         dark:bg-slate-800/80
+                         dark:text-slate-400
+                         dark:group-hover:border-orange-400
+                         dark:group-hover:bg-orange-500
+                         dark:group-hover:text-white"
+                >
+                  <span
+                    class="material-symbols-outlined text-lg"
+                  >
+                    {{ item.icon }}
+                  </span>
+                </div>
+              </div>
+
+              <p
+                class="relative z-10 max-w-90 text-xs
+                       leading-relaxed text-on-surface-variant/80
+                       transition-colors duration-300
+
+                       dark:text-slate-400
+                       dark:group-hover:text-slate-300
+
+                       md:text-sm"
+              >
+                {{ $t(item.descKey) }}
+              </p>
+
+              <!-- Bottom Accent -->
+              <div
+                class="pointer-events-none absolute bottom-0 left-6
+                       h-[2px] w-0 rounded-full
+                       bg-gradient-to-r from-secondary-container
+                       to-orange-400 transition-all duration-500
+                       group-hover:w-20"
+                aria-hidden="true"
+              ></div>
+            </article>
+          </div>
         </div>
+
+        <!-- Right Image -->
         <div
-            class="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-secondary-container/5 rounded-full blur-[100px] pointer-events-none">
-        </div>
+          class="scroll-reveal col-span-12 mt-8 flex flex-col
+                 lg:col-span-6 lg:mt-0"
+          style="transition-delay: 200ms"
+        >
+          <div
+            class="group/img relative h-full min-h-[380px] w-full
+                   overflow-hidden rounded-2xl border
+                   border-slate-200/40 bg-slate-100
+                   shadow-[0_20px_45px_-12px_rgba(15,23,42,0.08)]
 
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-12 gap-8 lg:gap-16 items-stretch">
+                   dark:border-white/[0.08]
+                   dark:bg-[#0b1220]
+                   dark:shadow-[0_30px_70px_-18px_rgba(0,0,0,0.55)]
 
-                <div class="col-span-12 lg:col-span-6 flex flex-col justify-center scroll-reveal row">
-                    <div class="flex items-center gap-4 mb-4 md:mb-6">
-                        <div class="w-12 h-[2px] bg-secondary-container"></div>
-                        <span
-                            class="text-[11px] font-bold font-ibm-thai text-on-surface-variant uppercase tracking-[0.2em] th:tracking-widest block">
-                            {{ $t('home.portfolio.tag') }}
-                        </span>
-                    </div>
-                    <h2
-                        class="text-3xl md:text-5xl font-ibm-thai font-extrabold text-primary mb-10 md:mb-14 tracking-tight leading-tight">
-                        {{ $t('home.portfolio.title') }}
-                        <br class=" hidden sm:inline" />
-                        <div class="sm:pt-0 lg:pt-2">
-                            <span class="block sm:inline text-primary/80">
-                                {{ $t('home.portfolio.title2') }}
-                            </span>
-                        </div>
-                    </h2>
+                   lg:min-h-0"
+          >
+            <!-- Image -->
+            <NuxtImg
+              src="/images/cargo-logistics.jpg"
+              format="webp"
+              preload
+              alt="cargo logistics"
+              class="h-full w-full object-cover
+                     transition-all duration-700
+                     group-hover/img:scale-105
+                     dark:brightness-[0.72]
+                     dark:contrast-110
+                     dark:saturate-[0.85]"
+            />
 
-                    <div class="space-y-4 md:space-y-5">
-                        <div v-for="item in portfolioItems" :key="item.id"
-                            class="portfolio-item-card p-6 bg-[#f8fafc] rounded-2xl border border-slate-300/70 transition-all duration-500 group cursor-pointer relative overflow-hidden">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-r from-secondary-container/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                            </div>
-                            <div class="flex justify-between items-start gap-4 mb-1 relative z-10">
-                                <h4
-                                    class="text-base md:text-lg font-bold font-ibm-thai text-primary group-hover:text-secondary-container transition-colors duration-300">
-                                    {{ $t(item.titleKey) }}
-                                </h4>
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-primary/60 shrink-0 group-hover:bg-secondary-container group-hover:text-white transition-all duration-500">
-                                    <span class="material-symbols-outlined text-lg">{{ item.icon }}</span>
-                                </div>
-                            </div>
-                            <p
-                                class="text-on-surface-variant/80 max-w-90 text-xs md:text-sm leading-relaxed relative z-10">
-                                {{ $t(item.descKey) }}
-                            </p>
-                        </div>
-                    </div>
+            <!-- Light Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t
+                     from-primary/25 via-transparent to-transparent
+                     mix-blend-multiply
+
+                     dark:from-[#020617]/85
+                     dark:via-[#07101e]/20
+                     dark:to-blue-950/10
+                     dark:mix-blend-normal"
+            ></div>
+
+            <!-- Dark Ambient Image Glow -->
+            <div
+              class="pointer-events-none absolute inset-0 hidden
+                     bg-gradient-to-br
+                     from-blue-500/[0.06]
+                     via-transparent
+                     to-orange-500/[0.04]
+                     dark:block"
+              aria-hidden="true"
+            ></div>
+
+            <!-- Image Top Highlight -->
+            <div
+              class="pointer-events-none absolute inset-x-10 top-0
+                     hidden h-px bg-gradient-to-r
+                     from-transparent via-blue-300/30
+                     to-transparent dark:block"
+              aria-hidden="true"
+            ></div>
+
+            <!-- Floating Information Card -->
+            <div
+              class="absolute bottom-4 left-4 right-4
+                     max-w-full rounded-xl border
+                     border-white/60 bg-white/90 p-5
+                     font-ibm-thai
+                     shadow-[0_15px_35px_-8px_rgba(15,23,42,0.12)]
+                     backdrop-blur-md
+                     transition-all duration-500
+                     hover:bg-white
+
+                     dark:border-white/[0.09]
+                     dark:bg-[#0b1424]/90
+                     dark:shadow-[0_20px_45px_-10px_rgba(0,0,0,0.50)]
+                     dark:hover:bg-[#0e192b]/95
+
+                     sm:bottom-6 sm:left-6 sm:right-6
+                     sm:max-w-[320px]
+                     lg:right-auto"
+            >
+              <div class="mb-3 flex items-center gap-3">
+                <!-- Card Icon -->
+                <div
+                  class="flex h-9 w-9 shrink-0 items-center
+                         justify-center rounded-lg bg-primary
+                         shadow-sm transition-colors duration-300
+
+                         dark:border dark:border-blue-400/15
+                         dark:bg-blue-500/15"
+                >
+                  <span
+                    class="material-symbols-outlined
+                           text-sm text-white
+                           dark:text-blue-300"
+                  >
+                    bar_chart
+                  </span>
                 </div>
 
-                <div class="col-span-12 lg:col-span-6 flex flex-col mt-8 lg:mt-0 scroll-reveal"
-                    style="transition-delay: 200ms;">
+                <div class="min-w-0">
+                  <div
+                    class="text-[8px] font-black uppercase
+                           tracking-[0.2em] text-slate-400
+                           th:tracking-widest
+                           dark:text-slate-500"
+                  >
+                    {{ $t('home.portfolio.card_status') }}
+                  </div>
 
-                    <div
-                        class="w-full h-full min-h-[380px] lg:min-h-0 bg-slate-100 rounded-2xl overflow-hidden shadow-[0_20px_45px_-12px_rgba(15,23,42,0.08)] border border-slate-200/40 relative group/img">
-                        <NuxtImg src="/images/cargo-logistics.jpg" format="webp" preload
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
-                            alt="cargo logistics" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-primary/25 via-transparent to-transparent mix-blend-multiply">
-                        </div>
-
-                        <div
-                            class="absolute bottom-4 left-4 font-ibm-thai right-4 sm:bottom-6 sm:left-6 sm:right-6 lg:right-auto bg-white/90 p-5 rounded-xl shadow-[0_15px_35px_-8px_rgba(15,23,42,0.12)] border border-white/60 backdrop-blur-md max-w-full sm:max-w-[320px] transition-all duration-500 hover:bg-white">
-                            <div class="flex items-center gap-3 mb-3">
-                                <div
-                                    class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0 shadow-sm">
-                                    <span class="material-symbols-outlined text-white text-sm">bar_chart</span>
-                                </div>
-                                <div>
-                                    <div class="text-[8px] font-black text-slate-400 uppercase tracking-[0.2em] th:tracking-widest">
-                                        {{ $t('home.portfolio.card_status') }}
-                                    </div>
-                                    <div class="text-xs font-bold text-primary tracking-tight mt-0.5">
-                                        {{ $t('home.portfolio.card_title') }}
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="h-1 w-full bg-slate-100 rounded-full overflow-hidden">
-                                <div class="h-full bg-secondary-container rounded-full w-3/4"></div>
-                            </div>
-
-                            <NuxtLink :to="localePath('/products')"
-                                class="flex justify-between items-center mt-3 pt-2.5 border-t border-slate-100/60 cursor-pointer hover:opacity-80 transition-opacity block">
-                                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">
-                                    {{ $t('home.portfolio.card_footer') }}
-                                </span>
-                                <span
-                                    class="material-symbols-outlined text-primary group-hover/img:text-secondary-container text-xs transition-colors">
-                                    east
-                                </span>
-                            </NuxtLink>
-                        </div>
-                    </div>
-
+                  <div
+                    class="mt-0.5 truncate text-xs font-bold
+                           tracking-tight text-primary
+                           dark:text-slate-100"
+                  >
+                    {{ $t('home.portfolio.card_title') }}
+                  </div>
                 </div>
+              </div>
 
+              <!-- Progress -->
+              <div
+                class="h-1 w-full overflow-hidden rounded-full
+                       bg-slate-100 dark:bg-slate-700/70"
+              >
+                <div
+                  class="h-full w-3/4 rounded-full
+                         bg-secondary-container
+                         dark:bg-orange-400"
+                ></div>
+              </div>
+
+              <!-- Footer Link -->
+              <NuxtLink
+                :to="localePath('/products')"
+                class="mt-3 flex cursor-pointer items-center
+                       justify-between border-t
+                       border-slate-100/60 pt-2.5
+                       transition-opacity hover:opacity-80
+
+                       dark:border-slate-700/70"
+              >
+                <span
+                  class="text-[9px] font-bold uppercase
+                         tracking-wider text-slate-400
+                         dark:text-slate-500"
+                >
+                  {{ $t('home.portfolio.card_footer') }}
+                </span>
+
+                <span
+                  class="material-symbols-outlined text-xs
+                         text-primary transition-colors
+                         group-hover/img:text-secondary-container
+
+                         dark:text-slate-300
+                         dark:group-hover/img:text-orange-400"
+                >
+                  east
+                </span>
+              </NuxtLink>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+
 const { t } = useI18n()
 const localePath = useLocalePath()
-// ชุดข้อมูลสําหรับรัน Loop การ์ด Portfolio
+
 const portfolioItems = [
-    {
-        id: 1,
-        titleKey: 'home.portfolio.item1_title',
-        descKey: 'home.portfolio.item1_desc',
-        icon: 'local_gas_station'
-    },
-    {
-        id: 2,
-        titleKey: 'home.portfolio.item2_title',
-        descKey: 'home.portfolio.item2_desc',
-        icon: 'propane_tank'
-    },
-    {
-        id: 3,
-        titleKey: 'home.portfolio.item3_title',
-        descKey: 'home.portfolio.item3_desc',
-        icon: 'wb_sunny'
-    }
+  {
+    id: 1,
+    titleKey: 'home.portfolio.item1_title',
+    descKey: 'home.portfolio.item1_desc',
+    icon: 'local_gas_station'
+  },
+  {
+    id: 2,
+    titleKey: 'home.portfolio.item2_title',
+    descKey: 'home.portfolio.item2_desc',
+    icon: 'propane_tank'
+  },
+  {
+    id: 3,
+    titleKey: 'home.portfolio.item3_title',
+    descKey: 'home.portfolio.item3_desc',
+    icon: 'wb_sunny'
+  }
 ]
 </script>
 
-<style scoped></style>
+<style scoped>
+.portfolio-item-card {
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+.portfolio-item-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 40px -15px rgba(15, 23, 42, 0.14),
+    0 0 24px -12px rgba(255, 137, 40, 0.12);
+}
+
+.dark .portfolio-item-card {
+  box-shadow:
+    0 12px 30px -15px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.dark .portfolio-item-card:hover {
+  box-shadow:
+    0 24px 50px -18px rgba(0, 0, 0, 0.62),
+    0 0 26px -14px rgba(249, 115, 22, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-item-card {
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>

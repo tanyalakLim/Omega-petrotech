@@ -1,6 +1,44 @@
 <template>
-  <footer
-    class="bg-gradient-to-b font-ibm-thai from-[#0f213e] to-primary text-white pt-16 md:pt-24 pb-12 overflow-hidden">
+  <footer class="relative isolate overflow-hidden
+         bg-gradient-to-b from-[#0f213e] to-primary
+         pb-12 pt-16 font-ibm-thai text-white
+         transition-colors duration-500
+
+         dark:bg-none
+         dark:bg-gradient-to-b
+         dark:from-[#0a1424]
+         dark:via-[#070d18]
+         dark:to-[#030711]
+
+         md:pt-24">
+    <!-- Dark Mode Background Effects -->
+    <div class="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden dark:block" aria-hidden="true">
+      <div class="absolute -right-52 -top-60
+               h-[620px] w-[620px] rounded-full
+               bg-blue-600/[0.10] blur-[160px]"></div>
+
+      <div class="absolute -bottom-64 -left-48
+               h-[560px] w-[560px] rounded-full
+               bg-orange-500/[0.055] blur-[150px]"></div>
+
+      <div class="absolute left-1/2 top-[40%]
+               h-[360px] w-[850px]
+               -translate-x-1/2 -translate-y-1/2
+               rounded-full bg-blue-500/[0.025]
+               blur-[120px]"></div>
+
+      <div class="absolute inset-0 opacity-[0.12]
+               bg-[linear-gradient(to_right,rgba(100,116,139,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(100,116,139,0.08)_1px,transparent_1px)]
+               [background-size:48px_48px]"></div>
+
+      <div class="absolute inset-0
+               bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(2,6,23,0.55)_100%)]"></div>
+    </div>
+    <!-- Top Divider -->
+    <div class="pointer-events-none absolute inset-x-0 top-0 z-20
+             h-px bg-gradient-to-r
+             from-transparent via-secondary-container to-transparent
+             opacity-40 dark:via-orange-400 dark:opacity-30" aria-hidden="true"></div>
 
     <div class="max-w-7xl mx-auto px-4">
 
@@ -28,7 +66,8 @@
         </div>
 
         <div class="col-span-1 md:col-span-2">
-          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
+          <h5
+            class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
             {{ $t('footer.quick_links') }}
           </h5>
           <client-only>
@@ -49,7 +88,8 @@
         </div>
 
         <div class="col-span-1 md:col-span-2">
-          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
+          <h5
+            class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
             {{ $t('footer.global_presence') }}
           </h5>
           <ul class="space-y-5">
@@ -67,7 +107,8 @@
         </div>
 
         <div class="col-span-1 sm:col-span-2 md:col-span-3">
-          <h5 class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
+          <h5
+            class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
             {{ $t('footer.contact_info') }}
           </h5>
           <ul class="space-y-3.5">
@@ -84,7 +125,7 @@
             <li class="pt-4">
               <a href="tel:+6620000000"
                 class="text-secondary-container font-bold text-sm tracking-widest block hover:underline">
-                +66 2 XXX XXXX
+                +66 2 0986100
               </a>
             </li>
           </ul>
@@ -94,7 +135,8 @@
 
       <div
         class="pt-8 md:pt-12 border-t border-white/5 flex flex-col-reverse md:flex-row justify-between items-center gap-6 text-center md:text-left">
-        <p class="text-[9px] text-white/20 uppercase tracking-[0.3em] th:tracking-widest md:tracking-[0.5em] leading-relaxed">
+        <p
+          class="text-[9px] text-white/20 uppercase tracking-[0.3em] th:tracking-widest md:tracking-[0.5em] leading-relaxed">
           {{ $t('footer.copyright') }}
         </p>
         <div class="flex gap-6 lg:gap-12">

@@ -2,6 +2,7 @@
     "nav": {
         "global_home": "Home",
         "strategic_services": "About Us",
+        "leadership": "Leadership",
         "market_insights": "Products",
         "compliance": "Compliance",
         "contact_us": "Contact Us"
@@ -17,8 +18,14 @@
         },
         "global_presence": "Global Presence",
         "locations": {
-            "me": { "label": "Middle East", "address": "Business Bay, Dubai, UAE" },
-            "sea": { "label": "Southeast Asia", "address": "Sukhumvit, Bangkok, Thailand" }
+            "me": {
+                "label": "Middle East",
+                "address": "Business Bay, Dubai, UAE"
+            },
+            "sea": {
+                "label": "Southeast Asia",
+                "address": "Sukhumvit, Bangkok, Thailand"
+            }
         },
         "contact_info": "Contact Info",
         "terms": "Terms of Engagement",
@@ -152,7 +159,7 @@
                     "footerText": "Oil networks across Asia and Middle East."
                 },
                 "ept": {
-                    "title": "Eakorn Petroleum Co., Ltd.",
+                    "title": "Eakorn Petroleums Co., Ltd.",
                     "description": "Comprised of Thai and international business professionals with long-standing global investor networks. Features executives with profound experience in corporate and international law who have managed transnational oil trade operations.",
                     "footerText": "Manages legal affairs and corporate compliance."
                 }
@@ -203,6 +210,186 @@
             }
         }
     },
+    "leadership": {
+        "tag": "Organization Structure",
+        "title": {
+            "part1": "Leadership",
+            "part2": "& Advisory Board"
+        },
+        "organization": {
+            "cSuiteExecutives": "C-Suite Executives"
+        },
+        "profile": {
+            "title": "Executive Profile",
+            "subtitle": "Omega Petrotech Leadership",
+            "close": "Close executive profile",
+            "active": "Active",
+            "department": "Department",
+            "memberType": "Member Type",
+            "biographyTitle": "Professional Biography",
+            "biographySubtitle": "Background and professional experience",
+            "biographyFallback": "Biography information for this member will be available soon.",
+            "expertiseTitle": "Core Expertise",
+            "expertiseSubtitle": "Leadership and professional capabilities",
+            "contactTitle": "Contact Information",
+            "contactSubtitle": "Professional contact details",
+            "emailAddress": "Email Address"
+        },
+        "members": {
+            "president": {
+                "name": "Kitisak Aramrueng",
+                "role": "President",
+                "displayRole": "President",
+                "type": "Executive",
+                "firm": "Omega Petrotech",
+                "department": "Executive Board",
+                "expertise": {
+                    "corporateStrategy": "Corporate Strategy",
+                    "ppp": "Public-Private Partnerships",
+                    "smartCity": "Smart City Development",
+                    "infrastructure": "Urban Infrastructure",
+                    "circularEconomy": "Circular Economy",
+                    "energyServices": "Energy Services"
+                },
+                "bio": {
+                    "paragraph1": "Mr. Kitisak Aramrueng is a distinguished business leader and strategic advisor with nearly four decades of experience spanning engineering, massive-scale urban infrastructure development, and high-level government policy. As President of Omega Petrotech, he brings a vision of sustainable growth backed by a proven track record of managing complex, multi-billion baht enterprises.",
+                    "paragraph2": "Prior to joining Omega Petrotech, Mr. Aramrueng served as Chairman of the Board for Krungthep Thanakom, the enterprise arm of the Bangkok Metropolitan Administration. In this crucial role, he steered landmark national projects, including the integration and management of the BTS Green Line mass transit extensions, the development of the Gold Line monorail, and pioneering hazardous waste-to-energy initiatives based on a Zero Waste model. His leadership was instrumental in implementing Bangkok's underground communication cable network and introducing the nation's first electric passenger boat services.",
+                    "paragraph3": "Mr. Aramrueng’s expertise lies at the intersection of technological innovation and corporate strategy. His career began in specialized research and development and electrical engineering, evolving into academia as a Master’s degree curriculum developer in Telecommunications at Assumption University, and later as managing director of IT and communication consulting firms. He has served as a senior Consulting Engineer on vital national projects, including the development of the new Thai Parliament building's automation and ICT systems, and critical command centers for the Royal Thai Police.",
+                    "paragraph4": "Currently, alongside his presidency at Omega Petrotech, Mr. Aramrueng continues to shape development policy as a Senior Advisor to Haier Energy Thailand and as an Advisor to the Deputy Chief of the Chonburi Provincial Administrative Organization. He is a key member of the Sub-Committee on Circular Economy Development under the House of Representatives, guiding national industrial policy toward the BCG, or Bio-Circular-Green, economy model.",
+                    "paragraph5": "Mr. Aramrueng holds a Bachelor of Engineering in Electrical Communications from Rajamangala Institute of Technology. His profound experience in forging Public-Private Partnerships, driving Smart City strategies, and building sustainable business organizations positions Omega Petrotech for exceptional leadership in the changing energy and energy services landscape."
+                }
+            },
+            "legal": {
+                "name": "Legal Team Office",
+                "role": "Legal & Compliance",
+                "displayRole": "Legal & Compliance",
+                "type": "Department",
+                "firm": "EPT",
+                "department": "Legal & Regulatory Compliance",
+                "expertise": {
+                    "governance": "Corporate Governance",
+                    "legalAdvisory": "Legal Advisory",
+                    "compliance": "Regulatory Compliance",
+                    "risk": "Risk Management"
+                },
+                "bio": {
+                    "paragraph1": "The Legal and Compliance Department supports the organization through regulatory oversight, corporate governance, risk management, and legal advisory services."
+                }
+            },
+            "ceo": {
+                "name": "Chief Executive Officer",
+                "role": "Founder • Chief Executive Officer",
+                "displayRole": "Chief Executive Officer (BMI)",
+                "type": "Executive",
+                "firm": "BMI",
+                "department": "Head Office",
+                "expertise": {
+                    "leadership": "Executive Leadership",
+                    "strategy": "Corporate Strategy",
+                    "businessDevelopment": "Business Development"
+                },
+                "bio": {
+                    "paragraph1": "The Chief Executive Officer is responsible for setting corporate strategy, driving business development, and overseeing organizational growth as the Founder and Chief Executive Officer of BMI."
+                }
+            },
+            "secretariat": {
+                "name": "Corporate Secretariat",
+                "role": "Company Secretary",
+                "displayRole": "Corporate Secretariat",
+                "type": "Department",
+                "firm": "Head Office",
+                "department": "Secretariat and Corporate Support",
+                "expertise": {
+                    "board": "Board Coordination",
+                    "records": "Corporate Records Management",
+                    "governance": "Corporate Governance Support"
+                },
+                "bio": {
+                    "paragraph1": "The Corporate Secretariat supports the Board of Directors and senior executives through governance coordination, corporate records management, and administrative support."
+                }
+            },
+            "cro": {
+                "name": "Chief Executive Officer",
+                "role": "Chief Risk Officer (CRO)",
+                "displayRole": "Risk Management (CRO)",
+                "type": "Employee",
+                "firm": "EPT",
+                "department": "Risk Management",
+                "expertise": {
+                    "enterpriseRisk": "Enterprise Risk Management",
+                    "governance": "Corporate Governance",
+                    "resilience": "Operational Resilience"
+                },
+                "bio": {
+                    "paragraph1": "The Chief Risk Officer oversees enterprise risk management and supports the development of resilient operating and governance frameworks for EPT."
+                }
+            },
+            "cfo": {
+                "name": "Chief Executive Officer",
+                "role": "Chief Financial Officer (CFO)",
+                "displayRole": "Financial Management (CFO)",
+                "type": "Employee",
+                "firm": "EPT",
+                "department": "Finance",
+                "expertise": {
+                    "financialStrategy": "Financial Strategy",
+                    "corporateFinance": "Corporate Finance",
+                    "investment": "Investment Planning"
+                },
+                "bio": {
+                    "paragraph1": "The Chief Financial Officer is responsible for financial strategy, corporate planning, financial reporting, and investment oversight for EPT."
+                }
+            },
+            "cpo": {
+                "name": "Chief Executive Officer",
+                "role": "Chief Procurement Officer (CPO)",
+                "displayRole": "Procurement (CPO)",
+                "type": "Contractor",
+                "firm": "BMI",
+                "department": "Procurement",
+                "expertise": {
+                    "sourcing": "Strategic Sourcing",
+                    "procurement": "Procurement Management",
+                    "supplier": "Supplier Management"
+                },
+                "bio": {
+                    "paragraph1": "The Chief Procurement Officer is responsible for strategic sourcing, supplier relationship management, and optimizing BMI’s procurement processes."
+                }
+            },
+            "cao": {
+                "name": "Chief Executive Officer",
+                "role": "Chief Administrative Officer (CAO)",
+                "displayRole": "General Administration (CAO)",
+                "type": "Employee",
+                "firm": "JB1",
+                "department": "General Administration",
+                "expertise": {
+                    "administration": "General Administration",
+                    "operations": "Operations Management",
+                    "support": "Corporate Support"
+                },
+                "bio": {
+                    "paragraph1": "The Chief Administrative Officer oversees administration, internal coordination, and corporate support systems for JB1."
+                }
+            },
+            "cmo": {
+                "name": "Chief Executive Officer",
+                "role": "Chief Marketing Officer (CMO)",
+                "displayRole": "Marketing (CMO)",
+                "type": "Employee",
+                "firm": "JB1",
+                "department": "Marketing",
+                "expertise": {
+                    "marketing": "Marketing Strategy",
+                    "brand": "Brand Development",
+                    "communication": "Corporate Communications"
+                },
+                "bio": {
+                    "paragraph1": "The Chief Marketing Officer is responsible for marketing strategy, brand development, marketing communications, and customer engagement initiatives for JB1."
+                }
+            }
+        }
+    },
     "products": {
         "tag": "Products & Sourcing",
         "title": {
@@ -231,7 +418,7 @@
             "partners": {
                 "label": "Global Network",
                 "title": "Strategic Partners",
-                "desc": "Sourcing directly from world-class refineries and premier global commodity brokers, such as Vitol (Singapore), through 12-Month Term Contracts to guarantee continuous supply security.",
+                "desc": "Sourcing directly from world-class refineries and premier global commodity brokers, through 12-Month Term Contracts to guarantee continuous supply security.",
                 "note": "Cultivating long-term partnerships to guarantee global supply security and operational excellence."
             },
             "models": {
@@ -253,7 +440,10 @@
     },
     "compliance": {
         "tag": "Global Standards & Framework",
-        "title": { "part1": "Compliance Excellence", "part2": "& Strategic ESG" },
+        "title": {
+            "part1": "Compliance Excellence",
+            "part2": "& Strategic ESG"
+        },
         "compliance": {
             "title": "Compliance Excellence & Enhanced CDD",
             "desc": "Omega Petrotech Company Limited operates under a strict, Zero-Tolerance Compliance Architecture that aligns thoroughly with the Wolfsberg Principles and international Anti-Money Laundering (AML) standards.",
@@ -287,8 +477,14 @@
                 "future": {
                     "label": "Phase 2 Horizons",
                     "title": "Future Carbon Offset Initiatives",
-                    "sub1": { "title": "Biofuel Blending", "desc": "Incorporating advanced biofuel blending programs (such as B10/B20) to support cleaner energy alternatives in the supply chain." },
-                    "sub2": { "title": "Renewable compliance", "desc": "Investing in utility-scale renewable energy compliance projects within the Western Economic Corridor (WEC) of Thailand." },
+                    "sub1": {
+                        "title": "Biofuel Blending",
+                        "desc": "Incorporating advanced biofuel blending programs (such as B10/B20) to support cleaner energy alternatives in the supply chain."
+                    },
+                    "sub2": {
+                        "title": "Renewable compliance",
+                        "desc": "Investing in utility-scale renewable energy compliance projects within the Western Economic Corridor (WEC) of Thailand."
+                    },
                     "footer": "* Actively supporting the decarbonization objectives of upstream global supply partners."
                 }
             }
@@ -297,38 +493,115 @@
     "contact": {
         "tag": "Global Partnerships",
         "title": "Connect With Us",
-        "subtitle": "Establish a strategic partnership with Omega Petrotech. We invite global suppliers, buyers, and financial institutions to connect with our trading desk.",
+        "subtitle": "Speak with our team about commercial opportunities, supply partnerships, trade finance, compliance onboarding, and corporate enquiries.",
+        "showcase": {
+            "badge": "Thailand Head Office",
+            "company": "Omega Petrotech Co., Ltd.",
+            "building": "Empire Tower, Sathorn",
+            "city": "Bangkok, Thailand",
+            "imageAlt": "Empire Tower office building in Sathorn, Bangkok",
+            "addressLabel": "Office Address",
+            "address": {
+                "line1": "Room No. 2708, 27th Floor, Empire Tower",
+                "line2": "1 South Sathorn Road, Yannawa, Sathorn",
+                "line3": "Bangkok, Thailand 10120"
+            },
+            "transitLabel": "Transit Access",
+            "transitValue": "BTS Chong Nonsi / Saint Louis",
+            "phoneLabel": "Telephone",
+            "phoneValue": "+66 2 098 6100",
+            "phoneHref": "+6620986100",
+            "emailLabel": "Email",
+            "emailValue": "infoomegapetrotech.com",
+            "directions": "Open in Google Maps",
+            "licenseLabel": "Business License",
+            "licenseValue": "0105567246471",
+            "mapTitle": "Office Location Map",
+            "mapAlt": "Omega Petrotech office location map at Empire Tower, Sathorn",
+            "openMap": "Open the office location map in full size",
+            "viewLarge": "View full size",
+            "closeMap": "Close map",
+            "closeHint": "Press ESC or click outside to close",
+            "mapLocation": "Empire Tower · South Sathorn Road"
+        },
         "offices": {
-            "title": "Corporate Network"
+            "title": "Office Network",
+            "desc": "Our operating office and partner network support commercial coordination, sourcing, and international energy transactions.",
+            "items": {
+                "bangkok": {
+                    "title": "Bangkok, Thailand",
+                    "badge": "HQ",
+                    "subtitle": "Omega Petrotech Co., Ltd.",
+                    "description": "Empire Tower, South Sathorn Road — the company’s operational and commercial headquarters in Thailand."
+                },
+                "dubai": {
+                    "title": "Dubai, UAE",
+                    "badge": "Partner Network",
+                    "subtitle": "Middle East Network",
+                    "description": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, United Arab Emirates."
+                }
+            }
         },
         "kyc": {
+            "eyebrow": "Compliance",
             "title": "KYC Onboarding Portal",
-            "desc": "For prospective trading counterparties and financial institutions. Download our standard KYC & Due Diligence package to accelerate account opening.",
-            "button": "Download KYC Package"
+            "desc": "Submit your corporate documents securely for counterparty verification and compliance onboarding.",
+            "steps": {
+                "profile": "Complete your basic company profile",
+                "documents": "Upload the required supporting documents",
+                "review": "Our compliance team reviews and follows up"
+            },
+            "features": {
+                "secureUpload": "Secure Upload",
+                "encrypted": "Encrypted Submission",
+                "reviewed": "Reviewed by Team"
+            },
+            "button": "Start KYC Registration"
         },
         "form": {
-            "title": "B2B Inquiry",
-            "desc": "Please select your inquiry type to route your message to the appropriate commercial desk.",
+            "eyebrow": "Business Inquiry",
+            "title": "Contact Our Business Team",
+            "desc": "Tell us how we can support your organisation. Our team will route your enquiry to the appropriate department.",
+            "responseTime": "Response within 1–2 business days",
             "fields": {
                 "type": {
-                    "label": "Nature of Inquiry",
-                    "placeholder": "Select business relationship type...",
+                    "label": "Inquiry Type",
                     "options": {
-                        "supplier": "Product Offering (Supplier)",
-                        "buyer": "Product Procurement (Buyer)",
-                        "finance": "Financial / Banking Institution",
-                        "other": "General Corporate Inquiry"
+                        "supplier": "Supplier / Sourcing",
+                        "buyer": "Buyer / Commercial",
+                        "finance": "Finance / Banking",
+                        "other": "Other Inquiry"
+                    },
+                    "captions": {
+                        "supplier": "For suppliers and sourcing partners",
+                        "buyer": "For buyers and commercial enquiries",
+                        "finance": "For banks and financial institutions",
+                        "other": "For general questions and other matters"
                     }
                 },
-                "company": "Company Name",
-                "name": "Contact Person",
-                "email": "Corporate Email",
-                "phone": "Phone Number",
-                "message": "Business Proposal / Message",
-                "messagePlaceholder": "Provide a brief overview of your proposal or requirements..."
+                "company": {
+                    "label": "Company",
+                    "placeholder": "Company Ltd."
+                },
+                "name": {
+                    "label": "Contact Name",
+                    "placeholder": "John Doe"
+                },
+                "email": {
+                    "label": "Business Email",
+                    "placeholder": "john{'@'}company.com"
+                },
+                "phone": {
+                    "label": "Telephone",
+                    "placeholder": "+66 XX XXX XXXX"
+                },
+                "message": {
+                    "label": "Message",
+                    "placeholder": "Please describe your business requirement, product, destination, volume, or proposed partnership."
+                }
             },
             "submit": "Submit Inquiry",
-            "privacy": "Your information is protected under our strict confidentiality policy."
+            "privacy": "Your information will be handled securely and used only to respond to this enquiry."
         }
     }
 }

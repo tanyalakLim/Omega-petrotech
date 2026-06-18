@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         { rel: 'canonical', href: 'https://www.omegapetrotech.com' }, // ใส่ URL เว็บไซต์จริงของคุณ
         { 
           rel: 'stylesheet', 
-          href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap' 
+          href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap' 
         }
       ]
     }
@@ -55,9 +55,12 @@ export default defineNuxtConfig({
 
   // 2. Color Mode Setup (Dark/Light)
   colorMode: {
-    classSuffix: '', // เพื่อให้ทำงานร่วมกับ class 'dark' ของ Tailwind ได้อย่างสมบูรณ์
     preference: 'system',
-    fallback: 'light'
+    fallback: 'light',
+    classPrefix: '',
+    classSuffix: '',
+    storage: 'localStorage',
+    storageKey: 'nuxt-color-mode'
   },
 
   // 3. Typography & Performance

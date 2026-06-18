@@ -1,124 +1,182 @@
 <template>
-    <section
-        class="relative font-ibm-thai py-28 md:pb-28  md:pt-[180px]  bg-gradient-to-br from-slate-50 via-blue-50/40 to-amber-50/50 text-slate-950 overflow-hidden border-b border-slate-200/60 flex items-center justify-center ">
-
-        <div class="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
-            <client-only>
-                <div class="absolute inset-0 bg-cover bg-center grayscale opacity-[0.12] mix-blend-multiply transition-opacity duration-1000"
-                    :style="{ backgroundImage: `url('/images/hero-vessel.jpg?t=${Date.now()}')` }"></div>
-
-            </client-only>
-            <div
-                class="absolute -top-32 -left-32 w-[600px] h-[600px] bg-secondary-container/[0.08] rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite] pointer-events-none">
-            </div>
-            <div
-                class="absolute -bottom-32 -right-32 w-[600px] h-[600px] bg-blue-500/[0.06] rounded-full blur-[100px] animate-[pulse_8s_ease-in-out_infinite_alternate-reverse] pointer-events-none">
-            </div>
-
-            <div
-                class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/40 via-transparent to-slate-900/[0.02]">
-            </div>
-
-            <div
-                class="absolute inset-0 opacity-[0.08] bg-[radial-gradient(#ff8928_1.5px,transparent_1.5px)] [background-size:24px_24px]">
-            </div>
-
-            <div
-                class="absolute top-0 left-[30%] w-px h-full bg-gradient-to-b from-transparent via-secondary-container/30 to-transparent">
-            </div>
-            <div
-                class="absolute top-[40%] left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent">
-            </div>
-
-            <div
-                class="absolute top-1/4 right-[15%] w-40 h-40 bg-white/30 backdrop-blur-3xl rounded-full border border-white/80 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] opacity-60 animate-[pulse_10s_ease-in-out_infinite] pointer-events-none">
-            </div>
-            <div
-                class="absolute bottom-1/4 left-[20%] w-20 h-20 bg-white/40 backdrop-blur-2xl rounded-full border border-white/80 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] opacity-50 animate-[pulse_7s_ease-in-out_infinite_reverse] pointer-events-none">
-            </div>
-
-            <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-white/90 rounded-[100%] blur-[80px] pointer-events-none">
-            </div>
+    <section class="relative flex min-h-screen items-center justify-center overflow-hidden
+           border-b border-slate-200/60 bg-slate-50 py-28
+           font-ibm-thai text-slate-950 transition-colors duration-500
+           dark:border-white/[0.06] dark:bg-[#011220] dark:text-white
+           md:pb-28 md:pt-[180px]">
+        <!-- Background Effects Component -->
+         <!-- Background Elements -->
+        <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+            <UiBackgroundEffects />
+            
+            <ClientOnly>
+                <div class="absolute inset-0 bg-cover bg-center grayscale
+                 opacity-[0.12] mix-blend-multiply
+                 transition-all duration-1000
+                 dark:opacity-[0.10]
+                 dark:mix-blend-luminosity
+                 dark:brightness-75
+                 dark:contrast-125" :style="{
+                    backgroundImage: `url('/images/hero-vessel.jpg?t=${Date.now()}')`
+                }"></div>
+            </ClientOnly>
         </div>
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10">
+        <!-- Main Content -->
+        <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6 lg:px-8">
+            <!-- Section Header -->
+            <UiSectionHeader :tag="$t('about.overview.tagline')" :title="$t('about.overview.title')" :desc="$t('about.overview.desc_part1') +
+                $t('about.overview.desc_year') +
+                $t('about.overview.desc_part2')
+                " as="h1" />
 
-            <!-- ─── 1. ส่วนแนะนำตัวตรงกลาง (Center Focus Intro) ─── -->
-            <UiSectionHeader :tag="$t('about.overview.tagline')" :title="$t('about.overview.title')"
-                :desc="$t('about.overview.desc_part1') + $t('about.overview.desc_year') + $t('about.overview.desc_part2')"
-                as="h1" />
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12 lg:gap-8">
+                <!-- Sourcing Focus -->
+                <div class="group relative flex flex-col justify-between overflow-hidden
+         rounded-[2rem] border border-white/5 bg-[#0c1324] p-8
+         text-white shadow-xl transition-all duration-500
+         hover:-translate-y-1
 
-            <!-- ─── 2. ส่วนกล่องข้อมูล Bento Box (Grid Layout) ─── -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+         dark:border-slate-700/60
+         dark:bg-[#0b1220]
+         dark:shadow-black/30
+         dark:hover:border-secondary-container/30
 
-                <!-- 📦 กล่องซ้าย: Sourcing Focus (col-span-5) -->
-                <div
-                    class="lg:col-span-5 bg-[#0c1324] text-white rounded-[2rem] p-8 md:p-10 shadow-xl relative overflow-hidden flex flex-col justify-between group transition-transform duration-500 hover:-translate-y-1">
-                    <!-- ลายน้ำพื้นหลังกล่อง -->
-                    <div
-                        class="absolute -bottom-10 -right-10 opacity-10 rotate-12 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110">
-                        <span class="material-symbols-outlined text-[150px]">nest_eco_leaf</span>
+         md:p-10 lg:col-span-5" style="box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2)">
+                    <!-- Dark Mode Ambient Background -->
+                    <div class="pointer-events-none absolute inset-0 hidden overflow-hidden dark:block"
+                        aria-hidden="true">
+                        <!-- Navy Gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-br
+             from-[#111c30] via-[#0b1220] to-[#070c16]"></div>
+
+                        <!-- Blue Glow -->
+                        <div class="absolute -right-28 -top-32 h-72 w-72 rounded-full
+             bg-blue-500/10 blur-[90px]"></div>
+
+                        <!-- Orange Glow -->
+                        <div class="absolute -bottom-32 -left-24 h-64 w-64 rounded-full
+             bg-secondary-container/10 blur-[90px]"></div>
+
+                        <!-- Subtle Top Highlight -->
+                        <div class="absolute inset-x-10 top-0 h-px
+             bg-gradient-to-r from-transparent
+             via-blue-300/25 to-transparent"></div>
                     </div>
-                    <div>
-                        <div
-                            class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-md border border-white/10">
-                            <span
-                                class="material-symbols-outlined text-secondary-container">precision_manufacturing</span>
+
+                    <!-- Watermark -->
+                    <div class="absolute -bottom-10 -right-10 rotate-12
+           opacity-10 transition-transform duration-700
+           group-hover:rotate-0 group-hover:scale-110
+           dark:text-blue-100 dark:opacity-[0.035]" aria-hidden="true">
+                        <span class="material-symbols-outlined text-[150px]">
+                            nest_eco_leaf
+                        </span>
+                    </div>
+
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="mb-6 flex h-12 w-12 items-center justify-center
+             rounded-2xl border border-white/10 bg-white/10
+             backdrop-blur-md
+
+             dark:border-secondary-container/20
+             dark:bg-secondary-container/[0.08]
+             dark:shadow-[0_0_24px_rgba(249,115,22,0.08)]">
+                            <span class="material-symbols-outlined text-secondary-container
+               dark:text-orange-400">
+                                precision_manufacturing
+                            </span>
                         </div>
 
-                        <h3 class="text-2xl font-bold mb-4 tracking-wide">
+                        <!-- Title -->
+                        <h3 class="mb-4 text-2xl font-bold tracking-wide text-white
+             dark:text-slate-50">
                             {{ $t('about.overview.sourcing.title') }}
                         </h3>
 
-                        <p class="text-white/70 text-sm leading-relaxed font-light mb-8">
+                        <!-- Description -->
+                        <p class="mb-8 text-sm font-light leading-relaxed text-white/70
+             dark:text-slate-300">
                             {{ $t('about.overview.sourcing.desc') }}
                         </p>
                     </div>
 
-                    <ul class="space-y-3 text-sm relative z-10">
-                        <li v-for="(item, index) in sourcingProducts" :key="index"
-                            class="flex items-center gap-4 bg-white/[0.03] px-5 py-3.5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
-                            <span
-                                class="w-1.5 h-1.5 rounded-full bg-secondary-container shrink-0 shadow-[0_0_8px_#ff8928]"></span>
-                            <span class="font-medium tracking-wide">{{ item }}</span>
+                    <!-- Product List -->
+                    <ul class="relative z-10 space-y-3 text-sm">
+                        <li v-for="(item, index) in sourcingProducts" :key="index" class="flex items-center gap-4 rounded-xl
+             border border-white/10 bg-white/[0.03]
+             px-5 py-3.5 transition-all duration-300
+             hover:border-white/20 hover:bg-white/10
+
+             dark:border-slate-700/60
+             dark:bg-slate-800/40
+             dark:hover:border-secondary-container/25
+             dark:hover:bg-slate-800/70">
+                            <span class="h-1.5 w-1.5 shrink-0 rounded-full
+               bg-secondary-container dark:bg-orange-400" style="box-shadow: 0 0 8px rgba(249, 115, 22, 0.7)"></span>
+
+                            <span class="font-medium tracking-wide text-white
+               dark:text-slate-200">
+                                {{ item }}
+                            </span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- 📦 กล่องขวา: ภาพบรรยากาศ + Financial Backing (col-span-7) -->
-                <div class="lg:col-span-7 rounded-[2rem] overflow-hidden shadow-xl relative min-h-[450px] group">
-                    <!-- ภาพพื้นหลัง -->
+                <!-- Image and Financial Backing -->
+                <div class="group relative min-h-[450px] overflow-hidden rounded-[2rem] shadow-xl dark:border-white/10 lg:col-span-7"
+                    style="box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18)">
+                    <!-- Background Image -->
                     <client-only>
-                        <div class="absolute bg-cover inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                            :style="{ backgroundImage: `url('/images/about-overview.jpg?t=${Date.now()}')` }" />
+                        <div class="absolute inset-0 h-full w-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
+                            :style="{
+                                backgroundImage: `url('/images/about-overview.jpg?t=${Date.now()}')`
+                            }"></div>
                     </client-only>
-                    <!-- เลเยอร์ไล่เฉดสีเพื่อให้ข้อความในการ์ดอ่านง่ายขึ้น -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent">
+
+                    <!-- Image Overlay -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent dark:from-black/85 dark:via-slate-950/40 dark:to-slate-900/10">
                     </div>
 
-                    <!-- Financial Backing Glass Card (ลอยอยู่มุมซ้ายล่าง) -->
-                    <div
-                        class="absolute bottom-6 left-6 right-6 md:right-auto md:w-[85%] lg:w-[90%] xl:w-[420px] bg-white/90 backdrop-blur-xl p-6 md:p-8 rounded-3xl border border-white/60 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-2">
-                        <div class="flex items-center gap-3 mb-3">
+                    <!-- Financial Backing Card -->
+                    <div class="absolute bottom-6 left-6 right-6 rounded-3xl
+                        border border-white/60 bg-white/90 p-6 backdrop-blur-xl
+                        transition-all duration-500 hover:-translate-y-2
+                        dark:border-white/[0.08] dark:bg-[#0d1424]/90
+                        dark:shadow-black/40
+                        md:right-auto md:w-[85%] md:p-8
+                        lg:w-[90%] xl:w-[420px]" style="box-shadow: 0 24px 55px -12px rgba(0, 0, 0, 0.35)">
+                        <!-- Label -->
+                        <div class="mb-3 flex items-center gap-3">
                             <div
-                                class="w-8 h-8 rounded-full bg-secondary-container/10 flex items-center justify-center shrink-0">
-                                <span
-                                    class="material-symbols-outlined text-secondary-container text-sm">account_balance</span>
+                                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-secondary-container/10 dark:bg-secondary-container/15">
+                                <span class="material-symbols-outlined text-sm text-secondary-container">
+                                    account_balance
+                                </span>
                             </div>
-                            <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500">
+
+                            <p
+                                class="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 md:text-xs">
                                 {{ $t('about.overview.finance.label') }}
                             </p>
                         </div>
 
-                        <div class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2">
-                            $15M – $100M <span class="text-lg font-medium text-slate-400">USD</span>
+                        <!-- Amount -->
+                        <div class="mb-2 text-2xl font-black tracking-tight text-slate-900 dark:text-white md:text-3xl">
+                            $15M – $100M
+
+                            <span class="text-lg font-medium text-slate-400 dark:text-slate-500">
+                                USD
+                            </span>
                         </div>
 
-                        <p class="text-sm text-slate-600 leading-relaxed" v-html="$t('about.overview.finance.desc')">
-                        </p>
+                        <!-- Finance Description -->
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300"
+                            v-html="$t('about.overview.finance.desc')"></p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -130,7 +188,6 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-// ข้อมูลจำลองสำหรับ Sourcing Products รอการผูกกับภาษา
 const sourcingProducts = computed(() => [
     t('about.overview.sourcing.items.diesel'),
     t('about.overview.sourcing.items.lng'),

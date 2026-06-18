@@ -10,7 +10,7 @@
     }
     .dark body {
         /* โหมดมืด: ใช้สีพื้นหลังและข้อความจาก Template ใหม่ */
-        @apply bg-surface-container-lowest text-on-surface;
+        @apply bg-primary text-on-surface transition-colors duration-500;
     }
 }
 
@@ -34,8 +34,28 @@
     /* เลื่อนขึ้นเล็กน้อย */
 }
 
+html.disable-theme-transition,
+html.disable-theme-transition *,
+html.disable-theme-transition *::before,
+html.disable-theme-transition *::after {
+    transition-property: none !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+}
+
+
+/* technical-grid */
+
 .technical-grid {
-    background-image: linear-gradient(to right, rgba(226, 232, 240, 0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(226, 232, 240, 0.4) 1px, transparent 1px);
+    background-image: linear-gradient( to right, rgba(226, 232, 240, 0.4) 1px, transparent 1px), linear-gradient( to bottom, rgba(226, 232, 240, 0.4) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+
+/* Dark Mode */
+
+.dark .technical-grid {
+    background-image: linear-gradient( to right, rgba(100, 116, 139, 0.1) 1px, transparent 1px), linear-gradient( to bottom, rgba(100, 116, 139, 0.1) 1px, transparent 1px);
     background-size: 40px 40px;
 }
 
@@ -70,11 +90,25 @@
     /* Dark grey color, you can choose any color you like */
 }
 
+.dark ::-webkit-scrollbar-track {
+    background: #00050e;
+    /* Dark grey color, you can choose any color you like */
+}
+
 
 /* This part changes the scrollbar handle */
 
 ::-webkit-scrollbar-thumb {
     background: #cdd4df;
+    /* Medium grey color, this is the actual scrollbar */
+    border-radius: 8px;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #12223b;
     /* Medium grey color, this is the actual scrollbar */
     border-radius: 8px;
     transition: all 0.4s;

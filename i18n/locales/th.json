@@ -31,16 +31,16 @@
             "roadmap": "แผนการดำเนินงาน",
             "contact": "ติดต่อเรา"
         },
-        "locations": {
-            "bangkok": {
-                "label": "สำนักงานใหญ่",
-                "title": "กรุงเทพมหานคร ประเทศไทย",
-                "address": "Empire Tower, South Sathorn Road"
-            },
-            "dubai": {
-                "label": "เครือข่ายพันธมิตร",
-                "title": "Umm Al Quwain, UAE",
-                "address": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone"
+        "network": {
+            "title": "เครือข่าย",
+            "uae": {
+                "location": "Dubai, UAE",
+                "label": "เครือข่ายตะวันออกกลาง",
+                "operatingNameLabel": "ชื่อที่ใช้ดำเนินธุรกิจ",
+                "company": "J.B One Group FZC",
+                "addressLabel": "ที่อยู่สำนักงาน",
+                "address": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, United Arab Emirates",
+                "websiteLabel": "เว็บไซต์"
             }
         },
         "contact": {
@@ -522,6 +522,7 @@
             "city": "กรุงเทพมหานคร ประเทศไทย",
             "imageAlt": "อาคารเอ็มไพร์ ทาวเวอร์ ย่านสาทร กรุงเทพมหานคร",
             "mapTitle": "แผนที่ตั้งบริษัท",
+            "mapAlt": "แผนที่แสดงที่ตั้งสำนักงาน Omega Petrotech ณ อาคารเอ็มไพร์ ทาวเวอร์ สาทร",
             "addressLabel": "ที่ตั้งสำนักงาน",
             "address": {
                 "line1": "ห้องเลขที่ 2708 ชั้น 27 อาคารเอ็มไพร์ ทาวเวอร์",
@@ -534,34 +535,31 @@
             "phoneValue": "+66 2 098 6100",
             "phoneHref": "+6620986100",
             "emailLabel": "อีเมล",
-            "emailValue": "infoomegapetrotech.com",
+            "emailValue": "info{'@'}omegapetrotech.com",
             "directions": "เปิดเส้นทางใน Google Maps",
             "licenseLabel": "เลขทะเบียนนิติบุคคล",
-            "licenseValue": "0105567246471",
-            "mapAlt": "แผนที่สำนักงาน Omega Petrotech ณ อาคารเอ็มไพร์ ทาวเวอร์ ถนนสาทร",
-            "openMap": "เปิดดูแผนที่สำนักงานขนาดใหญ่",
-            "viewLarge": "ดูภาพขนาดใหญ่",
-            "closeMap": "ปิดแผนที่",
-            "closeHint": "กด ESC หรือคลิกด้านนอกเพื่อปิด",
-            "mapLocation": "Empire Tower · South Sathorn Road"
+            "licenseValue": "0105567246471"
         },
         "offices": {
             "title": "เครือข่ายสำนักงาน",
-            "desc": "สำนักงานดำเนินงานและเครือข่ายพันธมิตรของเราสนับสนุนการประสานงานเชิงพาณิชย์ การจัดหา และธุรกรรมพลังงานระหว่างประเทศ",
-            "items": {
-                "bangkok": {
-                    "title": "กรุงเทพมหานคร ประเทศไทย",
-                    "badge": "สำนักงานใหญ่",
-                    "subtitle": "บริษัท โอเมก้า ปิโตรเทค จำกัด",
-                    "description": "อาคารเอ็มไพร์ ทาวเวอร์ ถนนสาทรใต้ เป็นสำนักงานใหญ่ด้านการดำเนินงานและการพาณิชย์ของบริษัทในประเทศไทย"
-                },
-                "dubai": {
-                    "title": "ดูไบ สหรัฐอาหรับเอมิเรตส์",
-                    "badge": "เครือข่ายพันธมิตร",
-                    "subtitle": "เครือข่ายตะวันออกกลาง",
-                    "description": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, United Arab Emirates"
-                }
-            }
+            "status": "พร้อมให้บริการ",
+            "desc": "ศูนย์กลางเครือข่ายตะวันออกกลางของเรา สนับสนุนการค้า การจัดหา และการประสานงานด้านโลจิสติกส์ระหว่างประเทศ",
+            "networkLabel": "เครือข่ายตะวันออกกลาง",
+            "location": "ดูไบ สหรัฐอาหรับเอมิเรตส์",
+            "imageAlt": "สำนักงาน J.B One Group FZC ในเขตปลอดอากร UAQ สหรัฐอาหรับเอมิเรตส์",
+            "intro": "J.B One Group FZC ตั้งอยู่เชิงกลยุทธ์ในศูนย์กลางธุรกิจชั้นนำของอุมม์อัลไกไวน์ ทำให้บริษัทอยู่ ณ จุดเชื่อมต่อสำคัญของการค้าโลก",
+            "operatingNameLabel": "ชื่อที่ใช้ดำเนินงาน",
+            "operatingName": "J.B One Group FZC",
+            "addressLabel": "ที่อยู่สำนักงาน",
+            "address": {
+                "line1": "Al Shmookh Business Center",
+                "line2": "One UAQ, UAQ Free Trade Zone",
+                "line3": "Umm Al Quwain, United Arab Emirates"
+            },
+            "websiteLabel": "เว็บไซต์",
+            "websiteValue": "www.jb1asset.com",
+            "websiteHref": "https://www.jb1asset.com/",
+            "visitWebsite": "เยี่ยมชมเว็บไซต์ J.B One Group"
         },
         "kyc": {
             "eyebrow": "การกำกับดูแล",

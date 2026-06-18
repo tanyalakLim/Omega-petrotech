@@ -1,6 +1,6 @@
 <template>
   <section
-    class="scroll-reveal inquiry-panel relative overflow-hidden rounded-[2rem]
+    class="scroll-reveal inquiry-panel relative flex h-full flex-col overflow-hidden rounded-[2rem]
            border border-slate-200/80 bg-white
            shadow-[0_28px_85px_-46px_rgba(15,23,42,0.38)]
            dark:border-white/[0.08] dark:bg-[#0b1220]
@@ -30,17 +30,6 @@
              md:px-10 md:py-9"
     >
       <div class="flex min-w-0 items-start gap-4">
-        <div
-          class="flex h-12 w-12 shrink-0 items-center justify-center
-                 rounded-2xl bg-primary text-white shadow-lg
-                 shadow-primary/10
-                 dark:border dark:border-orange-400/20
-                 dark:bg-orange-500 dark:text-white"
-        >
-          <span class="material-symbols-outlined text-[24px]">
-            mail
-          </span>
-        </div>
 
         <div class="min-w-0">
           <span
@@ -56,14 +45,14 @@
           </span>
 
           <h2
-            class="text-2xl font-black tracking-tight text-primary
+            class="text-2xl pt-5 font-black tracking-tight text-primary
                    dark:text-white md:text-3xl"
           >
             {{ t('contact.form.title') }}
           </h2>
 
           <p
-            class="mt-2 max-w-2xl text-sm font-light leading-7
+            class="mt-2 max-w-full text-sm font-light leading-7
                    text-slate-600 dark:text-slate-400"
           >
             {{ t('contact.form.desc') }}
@@ -94,7 +83,7 @@
 
     <!-- Form body -->
     <form
-      class="relative z-10 space-y-8 px-7 py-8 md:px-10 md:py-10"
+      class="relative z-10 flex flex-1 flex-col space-y-8 px-7 py-8 md:px-10 md:py-10"
       @submit.prevent="submitForm"
     >
       <!-- Inquiry type -->
@@ -250,12 +239,12 @@ interface ContactInquiryPayload {
   type: string
   company: string
   name: string
-  e: string
+  email: string
   phone: string
   message: string
 }
 
-type ContactFieldKey = 'company' | 'name' | 'e' | 'phone'
+type ContactFieldKey = 'company' | 'name' | 'email' | 'phone'
 
 const emit = defineEmits<{
   submit: [payload: ContactInquiryPayload]

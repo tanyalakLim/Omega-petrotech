@@ -12,7 +12,7 @@
         "logoAlt": "Omega Petrotech logo",
         "desc": "Omega Petrotech connects energy sourcing, trading, logistics, and governance to support reliable, transparent, and sustainable regional operations.",
         "quick_links": "Quick Links",
-        "global_presence": "Office Network",
+        "global_presence": "Network",
         "contact_info": "Contact Information",
         "headOffice": {
             "label": "Thailand Head Office",
@@ -32,15 +32,22 @@
             "contact": "Contact Us"
         },
         "locations": {
-            "bangkok": {
-                "label": "Head Office",
-                "title": "Bangkok, Thailand",
-                "address": "Empire Tower, South Sathorn Road"
-            },
             "dubai": {
-                "label": "Partner Network",
+                "label": "Network",
                 "title": "Umm Al Quwain, UAE",
                 "address": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone"
+            }
+        },
+        "network": {
+            "title": "Network",
+            "uae": {
+                "location": "Dubai, UAE",
+                "label": "Middle East Network",
+                "operatingNameLabel": "Operating Name",
+                "company": "J.B One Group FZC",
+                "addressLabel": "Office Address",
+                "address": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, United Arab Emirates",
+                "websiteLabel": "Website"
             }
         },
         "contact": {
@@ -175,7 +182,7 @@
                     "footerText": "Directly mitigates demurrage risks."
                 },
                 "jb1": {
-                    "title": "JB1 Group FZC",
+                    "title": "J.B One Group FZC",
                     "description": "Established in a Free Trade Zone, with its headquarters located at Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, United Arab Emirates. Legally registered as an official oil trader.",
                     "footerText": "Oil networks across Asia and Middle East."
                 },
@@ -521,6 +528,8 @@
             "building": "Empire Tower, Sathorn",
             "city": "Bangkok, Thailand",
             "imageAlt": "Empire Tower office building in Sathorn, Bangkok",
+            "mapTitle": "Company Location",
+            "mapAlt": "Map showing the Omega Petrotech office at Empire Tower, Sathorn",
             "addressLabel": "Office Address",
             "address": {
                 "line1": "Room No. 2708, 27th Floor, Empire Tower",
@@ -533,35 +542,31 @@
             "phoneValue": "+66 2 098 6100",
             "phoneHref": "+6620986100",
             "emailLabel": "Email",
-            "emailValue": "infoomegapetrotech.com",
+            "emailValue": "info{'@'}omegapetrotech.com",
             "directions": "Open in Google Maps",
             "licenseLabel": "Business License",
-            "licenseValue": "0105567246471",
-            "mapTitle": "Office Location Map",
-            "mapAlt": "Omega Petrotech office location map at Empire Tower, Sathorn",
-            "openMap": "Open the office location map in full size",
-            "viewLarge": "View full size",
-            "closeMap": "Close map",
-            "closeHint": "Press ESC or click outside to close",
-            "mapLocation": "Empire Tower · South Sathorn Road"
+            "licenseValue": "0105567246471"
         },
         "offices": {
             "title": "Office Network",
-            "desc": "Our operating office and partner network support commercial coordination, sourcing, and international energy transactions.",
-            "items": {
-                "bangkok": {
-                    "title": "Bangkok, Thailand",
-                    "badge": "HQ",
-                    "subtitle": "Omega Petrotech Co., Ltd.",
-                    "description": "Empire Tower, South Sathorn Road — the company’s operational and commercial headquarters in Thailand."
-                },
-                "dubai": {
-                    "title": "Dubai, UAE",
-                    "badge": "Partner Network",
-                    "subtitle": "Middle East Network",
-                    "description": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, United Arab Emirates."
-                }
-            }
+            "status": "Operational",
+            "desc": "Our Middle East network hub supports international trade, sourcing, and logistics coordination.",
+            "networkLabel": "Middle East Network",
+            "location": "Dubai, UAE",
+            "imageAlt": "J.B One Group FZC office at the UAQ Free Trade Zone in the United Arab Emirates",
+            "intro": "J.B One Group FZC is strategically located in the premier business hub of Umm Al Quwain, positioning us at the crossroads of global trade.",
+            "operatingNameLabel": "Operating Name",
+            "operatingName": "J.B One Group FZC",
+            "addressLabel": "Office Address",
+            "address": {
+                "line1": "Al Shmookh Business Center",
+                "line2": "One UAQ, UAQ Free Trade Zone",
+                "line3": "Umm Al Quwain, United Arab Emirates"
+            },
+            "websiteLabel": "Website",
+            "websiteValue": "www.jb1asset.com",
+            "websiteHref": "https://www.jb1asset.com/",
+            "visitWebsite": "Visit J.B One Group Website"
         },
         "kyc": {
             "eyebrow": "Compliance",

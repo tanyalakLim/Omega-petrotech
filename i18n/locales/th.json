@@ -8,31 +8,52 @@
         "contact_us": "ติดต่อเรา"
     },
     "footer": {
-        "desc": "ศูนย์กลางพลังงานที่มีสภาพคล่องสูง เชื่อมโยงการผลิตระดับโลกสู่ตลาดเอเชียแปซิฟิกด้วยการกำกับดูแลที่โปร่งใส",
-        "quick_links": "ลิงก์การดำเนินงาน",
-        "links": {
-            "products": "ผลิตภัณฑ์และการขนส่ง",
-            "governance": "โครงสร้างองค์กร",
-            "compliance": "มาตรฐานการกำกับดูแล",
-            "roadmap": "แผนการดำเนินงาน"
+        "homeLabel": "กลับสู่หน้าหลัก",
+        "logoAlt": "โลโก้ Omega Petrotech",
+        "desc": "Omega Petrotech เชื่อมโยงการจัดหาพลังงาน การค้า โลจิสติกส์ และการกำกับดูแล เพื่อสนับสนุนการดำเนินธุรกิจที่มั่นคง โปร่งใส และยั่งยืนในระดับภูมิภาค",
+        "quick_links": "ลิงก์ด่วน",
+        "global_presence": "เครือข่ายสำนักงาน",
+        "contact_info": "ข้อมูลติดต่อ",
+        "headOffice": {
+            "label": "สำนักงานใหญ่ประเทศไทย",
+            "company": "บริษัท โอเมก้า ปิโตรเทค จำกัด",
+            "address": "ห้อง 2708 ชั้น 27 อาคารเอ็มไพร์ ทาวเวอร์ เลขที่ 1 ถนนสาทรใต้ แขวงยานนาวา เขตสาทร กรุงเทพมหานคร 10120"
         },
-        "global_presence": "ศูนย์กลางเชิงกลยุทธ์",
+        "actions": {
+            "map": "เปิดแผนที่สำนักงาน",
+            "email": "ส่งอีเมลถึงบริษัท",
+            "call": "โทรติดต่อบริษัท"
+        },
+        "links": {
+            "products": "ผลิตภัณฑ์และบริการ",
+            "governance": "เกี่ยวกับองค์กร",
+            "compliance": "การกำกับดูแลและ ESG",
+            "roadmap": "แผนการดำเนินงาน",
+            "contact": "ติดต่อเรา"
+        },
         "locations": {
-            "me": {
-                "label": "ตะวันออกกลาง",
-                "address": "Business Bay, ดูไบ, สหรัฐอาหรับเอมิเรตส์"
+            "bangkok": {
+                "label": "สำนักงานใหญ่",
+                "title": "กรุงเทพมหานคร ประเทศไทย",
+                "address": "Empire Tower, South Sathorn Road"
             },
-            "sea": {
-                "label": "เอเชียตะวันออกเฉียงใต้",
-                "address": "สุขุมวิท, กรุงเทพฯ, ไทย"
+            "dubai": {
+                "label": "เครือข่ายพันธมิตร",
+                "title": "Umm Al Quwain, UAE",
+                "address": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone"
             }
         },
-        "contact_info": "ข้อมูลติดต่อ",
-        "terms": "ข้อกำหนดการใช้บริการ",
-        "risk": "การเปิดเผยความเสี่ยง",
-        "copyright": "© 2026 Omega Petrotech สงวนลิขสิทธิ์",
-        "tag1": "ความเข้มงวดของสถาบัน",
-        "tag2": "การเชื่อมต่อระดับโลก"
+        "contact": {
+            "phoneLabel": "โทรศัพท์",
+            "emailLabel": "อีเมล",
+            "email": "info{'@'}omegapetrotech.com",
+            "registrationLabel": "เลขทะเบียนนิติบุคคล"
+        },
+        "terms": "ข้อกำหนดการใช้งาน",
+        "risk": "คำชี้แจงความเสี่ยง",
+        "copyright": "© {year} OMEGA PETROTECH CO., LTD. สงวนลิขสิทธิ์",
+        "tag1": "Energy Trading",
+        "tag2": "Responsible Growth"
     },
     "home": {
         "hero": {

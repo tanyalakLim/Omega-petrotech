@@ -1,154 +1,382 @@
 <template>
-  <footer class="relative isolate overflow-hidden
-         bg-gradient-to-b from-[#0f213e] to-primary
-         pb-12 pt-16 font-ibm-thai text-white
-         transition-colors duration-500
+  <footer
+    class="relative isolate overflow-hidden
+           bg-gradient-to-b from-[#0f213e] to-primary
+           pb-10 pt-16 font-ibm-thai text-white
+           dark:bg-none dark:bg-gradient-to-b
+           dark:from-[#0a1424] dark:via-[#070d18] dark:to-[#030711]
+           md:pb-12 md:pt-24"
+  >
+    <!-- Dark mode background effects -->
+    <div
+      class="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden dark:block"
+      aria-hidden="true"
+    >
+      <div
+        class="absolute -right-52 -top-60 h-[620px] w-[620px]
+               rounded-full bg-blue-600/[0.10] blur-[160px]"
+      ></div>
 
-         dark:bg-none
-         dark:bg-gradient-to-b
-         dark:from-[#0a1424]
-         dark:via-[#070d18]
-         dark:to-[#030711]
+      <div
+        class="absolute -bottom-64 -left-48 h-[560px] w-[560px]
+               rounded-full bg-orange-500/[0.055] blur-[150px]"
+      ></div>
 
-         md:pt-24">
-    <!-- Dark Mode Background Effects -->
-    <div class="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden dark:block" aria-hidden="true">
-      <div class="absolute -right-52 -top-60
-               h-[620px] w-[620px] rounded-full
-               bg-blue-600/[0.10] blur-[160px]"></div>
+      <div
+        class="absolute left-1/2 top-[40%] h-[360px] w-[850px]
+               -translate-x-1/2 -translate-y-1/2 rounded-full
+               bg-blue-500/[0.025] blur-[120px]"
+      ></div>
 
-      <div class="absolute -bottom-64 -left-48
-               h-[560px] w-[560px] rounded-full
-               bg-orange-500/[0.055] blur-[150px]"></div>
-
-      <div class="absolute left-1/2 top-[40%]
-               h-[360px] w-[850px]
-               -translate-x-1/2 -translate-y-1/2
-               rounded-full bg-blue-500/[0.025]
-               blur-[120px]"></div>
-
-      <div class="absolute inset-0 opacity-[0.12]
+      <div
+        class="absolute inset-0 opacity-[0.12]
                bg-[linear-gradient(to_right,rgba(100,116,139,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(100,116,139,0.08)_1px,transparent_1px)]
-               [background-size:48px_48px]"></div>
+               [background-size:48px_48px]"
+      ></div>
 
-      <div class="absolute inset-0
-               bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(2,6,23,0.55)_100%)]"></div>
+      <div
+        class="absolute inset-0
+               bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(2,6,23,0.55)_100%)]"
+      ></div>
     </div>
-    <!-- Top Divider -->
-    <div class="pointer-events-none absolute inset-x-0 top-0 z-20
-             h-px bg-gradient-to-r
-             from-transparent via-secondary-container to-transparent
-             opacity-40 dark:via-orange-400 dark:opacity-30" aria-hidden="true"></div>
 
-    <div class="max-w-7xl mx-auto px-4">
+    <!-- Top divider -->
+    <div
+      class="pointer-events-none absolute inset-x-0 top-0 z-20 h-px
+             bg-gradient-to-r from-transparent via-secondary-container
+             to-transparent opacity-40 dark:via-orange-400 dark:opacity-30"
+      aria-hidden="true"
+    ></div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-10 md:gap-8 lg:gap-16 mb-16 md:mb-24">
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
+      <div
+        class="mb-14 grid grid-cols-1 gap-10
+               sm:grid-cols-2 md:mb-20 md:grid-cols-12 md:gap-8 lg:gap-12"
+      >
+        <!-- Company information -->
+        <div class="sm:col-span-2 md:col-span-5 lg:pr-8">
+          <NuxtLink
+            :to="localePath('/')"
+            class="mb-7 inline-flex items-center"
+            :aria-label="t('footer.homeLabel')"
+          >
+            <img
+              src="/images/logo_w.png"
+              class="h-[40px] w-auto object-contain"
+              :alt="t('footer.logoAlt')"
+            >
+          </NuxtLink>
 
-        <div class="sm:col-span-2 md:col-span-5 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-2 mb-6 md:mb-10">
-              <img src="/images/logo_w.png" class="h-[40px] w-auto object-contain" alt="Logo">
-            </div>
-            <p class="text-white/40 text-sm font-light leading-relaxed max-w-sm mb-8 md:mb-12">
-              {{ $t('footer.desc') }}
-            </p>
-          </div>
-          <div class="flex gap-4">
-            <a class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary-container hover:border-secondary-container transition-all"
-              href="https://linkedin.com" target="_blank" aria-label="Network">
-              <span class="material-symbols-outlined text-lg">public</span>
+          <p
+            class="mb-7 max-w-md text-sm font-light leading-7
+                   text-white/55"
+          >
+            {{ t('footer.desc') }}
+          </p>
+
+          <!-- Action buttons -->
+          <div class="flex flex-wrap gap-3">
+            <a
+              :href="googleMapsUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social-link"
+              :aria-label="t('footer.actions.map')"
+              :title="t('footer.actions.map')"
+            >
+              <span class="material-symbols-outlined text-lg">location_on</span>
             </a>
-            <a class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secondary-container hover:border-secondary-container transition-all"
-              href="mailto:contact@example.com" aria-label="Email">
+
+            <a
+              href="mailto:info@omegapetrotech.com"
+              class="footer-social-link"
+              :aria-label="t('footer.actions.email')"
+              :title="t('footer.actions.email')"
+            >
               <span class="material-symbols-outlined text-lg">mail</span>
+            </a>
+
+            <a
+              href="tel:+6620986100"
+              class="footer-social-link"
+              :aria-label="t('footer.actions.call')"
+              :title="t('footer.actions.call')"
+            >
+              <span class="material-symbols-outlined text-lg">call</span>
             </a>
           </div>
         </div>
 
-        <div class="col-span-1 md:col-span-2">
-          <h5
-            class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
-            {{ $t('footer.quick_links') }}
+        <!-- Quick links -->
+        <nav class="col-span-1 md:col-span-2" :aria-label="t('footer.quick_links')">
+          <h5 class="footer-heading">
+            {{ t('footer.quick_links') }}
           </h5>
-          <client-only>
+
+          <ClientOnly>
             <ul class="space-y-3.5">
-              <li v-for="item in [
-                { key: 'products', path: '/products' },
-                { key: 'governance', path: '/about' },
-                { key: 'compliance', path: '/compliance' },
-                { key: 'roadmap', path: { path: '/', hash: '#roadmap' } },
-              ]" :key="item.key">
-                <NuxtLink :to="localePath(item.path)"
-                  class="text-white/60 hover:text-white transition-colors text-xs font-light block py-0.5">
-                  {{ $t(`footer.links.${item.key}`) }}
+              <li v-for="item in quickLinks" :key="item.key">
+                <NuxtLink
+                  :to="localePath(item.path)"
+                  class="footer-link"
+                >
+                  {{ t(`footer.links.${item.key}`) }}
                 </NuxtLink>
               </li>
             </ul>
-          </client-only>
-        </div>
+          </ClientOnly>
+        </nav>
 
+        <!-- Office network -->
         <div class="col-span-1 md:col-span-2">
-          <h5
-            class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
-            {{ $t('footer.global_presence') }}
+          <h5 class="footer-heading">
+            {{ t('footer.global_presence') }}
           </h5>
-          <ul class="space-y-5">
-            <li>
-              <span class="block text-white/30 text-[9px] font-bold uppercase mb-1">{{ $t('footer.locations.me.label')
-                }}</span>
-              <span class="text-xs font-light text-white/80">{{ $t('footer.locations.me.address') }}</span>
-            </li>
-            <li>
-              <span class="block text-white/30 text-[9px] font-bold uppercase mb-1">{{ $t('footer.locations.sea.label')
-                }}</span>
-              <span class="text-xs font-light text-white/80">{{ $t('footer.locations.sea.address') }}</span>
+
+          <ul class="space-y-6">
+            <li v-for="office in offices" :key="office.key">
+              <div class="mb-2 flex items-center gap-2">
+                <span
+                  class="h-1.5 w-1.5 shrink-0 rounded-full"
+                  :class="office.key === 'bangkok'
+                    ? 'bg-secondary-container dark:bg-orange-400'
+                    : 'bg-blue-400'"
+                ></span>
+
+                <span
+                  class="text-[9px] font-bold uppercase tracking-[0.14em]
+                         text-white/35"
+                >
+                  {{ t(`footer.locations.${office.key}.label`) }}
+                </span>
+              </div>
+
+              <p class="text-xs font-semibold leading-5 text-white/85">
+                {{ t(`footer.locations.${office.key}.title`) }}
+              </p>
+
+              <p class="mt-1 text-[11px] font-light leading-5 text-white/45">
+                {{ t(`footer.locations.${office.key}.address`) }}
+              </p>
             </li>
           </ul>
         </div>
 
+        <!-- Contact and legal -->
         <div class="col-span-1 sm:col-span-2 md:col-span-3">
-          <h5
-            class="text-[10px] font-bold text-secondary-container uppercase tracking-[0.2em] th:tracking-widest mb-6 md:mb-10">
-            {{ $t('footer.contact_info') }}
+          <h5 class="footer-heading">
+            {{ t('footer.contact_info') }}
           </h5>
-          <ul class="space-y-3.5">
+
+          <ul class="space-y-4">
             <li>
-              <NuxtLink class="text-white/60 hover:text-white transition-colors text-xs font-light block py-0.5">
-                {{ $t('footer.terms') }}
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink class="text-white/60 hover:text-white transition-colors text-xs font-light block py-0.5">
-                {{ $t('footer.risk') }}
-              </NuxtLink>
-            </li>
-            <li class="pt-4">
-              <a href="tel:+6620000000"
-                class="text-secondary-container font-bold text-sm tracking-widest block hover:underline">
-                +66 2 0986100
+              <a href="tel:+6620986100" class="footer-contact-row">
+                <span class="material-symbols-outlined text-[18px]">
+                  call
+                </span>
+                <span>
+                  <span class="footer-contact-label">
+                    {{ t('footer.contact.phoneLabel') }}
+                  </span>
+                  <span class="footer-contact-value">+66 2 098 6100</span>
+                </span>
               </a>
             </li>
+
+            <li>
+              <a
+                href="mailto:info@omegapetrotech.com"
+                class="footer-contact-row"
+              >
+                <span class="material-symbols-outlined text-[18px]">
+                  alternate_email
+                </span>
+                <span class="min-w-0">
+                  <span class="footer-contact-label">
+                    {{ t('footer.contact.emailLabel') }}
+                  </span>
+                  <span class="footer-contact-value break-all">
+                    {{ t('footer.contact.email') }}
+                  </span>
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <div class="footer-contact-row">
+                <span class="material-symbols-outlined text-[18px]">
+                  badge
+                </span>
+                <span>
+                  <span class="footer-contact-label">
+                    {{ t('footer.contact.registrationLabel') }}
+                  </span>
+                  <span class="footer-contact-value">0105567246471</span>
+                </span>
+              </div>
+            </li>
           </ul>
-        </div>
 
+        </div>
       </div>
 
+      <!-- Footer bottom -->
       <div
-        class="pt-8 md:pt-12 border-t border-white/5 flex flex-col-reverse md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        class="flex flex-col-reverse items-center justify-between gap-6
+               border-t border-white/[0.07] pt-8 text-center
+               md:flex-row md:pt-10 md:text-left"
+      >
         <p
-          class="text-[9px] text-white/20 uppercase tracking-[0.3em] th:tracking-widest md:tracking-[0.5em] leading-relaxed">
-          {{ $t('footer.copyright') }}
+          class="text-[9px] uppercase leading-relaxed tracking-[0.25em]
+                 text-white/25 th:tracking-widest md:tracking-[0.38em]"
+        >
+          {{ t('footer.copyright', { year: currentYear }) }}
         </p>
-        <div class="flex gap-6 lg:gap-12">
-          <p class="text-[9px] text-white/20 uppercase tracking-[0.2em] th:tracking-widest">{{ $t('footer.tag1') }}</p>
-          <p class="text-[9px] text-white/20 uppercase tracking-[0.2em] th:tracking-widest">{{ $t('footer.tag2') }}</p>
+
+        <div class="flex flex-wrap justify-center gap-5 lg:gap-9">
+          <p class="footer-bottom-tag">
+            {{ t('footer.tag1') }}
+          </p>
+          <p class="footer-bottom-tag">
+            {{ t('footer.tag2') }}
+          </p>
         </div>
       </div>
-
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const localePath = useLocalePath()
+const currentYear = new Date().getFullYear()
+
+const googleMapsUrl =
+  'https://www.google.com/maps/search/?api=1&query=Empire+Tower+1+South+Sathorn+Road+Bangkok+10120'
+
+const quickLinks = [
+  { key: 'products', path: '/products' },
+  { key: 'governance', path: '/about' },
+  { key: 'compliance', path: '/compliance' },
+  { key: 'roadmap', path: { path: '/', hash: '#roadmap' } },
+  { key: 'contact', path: '/contact' }
+]
+
+const offices = [
+  { key: 'bangkok' },
+  { key: 'dubai' }
+]
 </script>
+
+<style scoped>
+.footer-heading {
+  margin-bottom: 1.5rem;
+  color: rgb(255 137 40);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer-link {
+  display: block;
+  padding-block: 0.125rem;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.75rem;
+  font-weight: 300;
+  transition: color 250ms ease, transform 250ms ease;
+}
+
+.footer-link:hover {
+  color: white;
+  transform: translateX(3px);
+}
+
+.footer-social-link {
+  display: flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.78);
+  transition: border-color 250ms ease, background-color 250ms ease,
+    color 250ms ease, transform 250ms ease;
+}
+
+.footer-social-link:hover {
+  transform: translateY(-2px);
+  border-color: rgb(255 137 40);
+  background: rgb(255 137 40);
+  color: white;
+}
+
+.footer-contact-row {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.footer-contact-row:is(a):hover {
+  color: rgb(255 137 40);
+}
+
+.footer-contact-label,
+.footer-contact-value {
+  display: block;
+}
+
+.footer-contact-label {
+  margin-bottom: 0.2rem;
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-contact-value {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.footer-legal-link {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.7rem;
+  font-weight: 300;
+  transition: color 250ms ease;
+}
+
+.footer-legal-link:hover {
+  color: white;
+}
+
+.footer-bottom-tag {
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .footer-heading {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-link,
+  .footer-social-link,
+  .footer-legal-link {
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>

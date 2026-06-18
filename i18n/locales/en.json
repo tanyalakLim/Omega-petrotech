@@ -8,31 +8,52 @@
         "contact_us": "Contact Us"
     },
     "footer": {
-        "desc": "Empowering global energy systems through innovative logistics and strategic infrastructure solutions.",
+        "homeLabel": "Return to the home page",
+        "logoAlt": "Omega Petrotech logo",
+        "desc": "Omega Petrotech connects energy sourcing, trading, logistics, and governance to support reliable, transparent, and sustainable regional operations.",
         "quick_links": "Quick Links",
-        "links": {
-            "products": "Products & Specifications",
-            "governance": "Organizational Framework",
-            "compliance": "Compliance Standards",
-            "roadmap": "Strategic Roadmap"
+        "global_presence": "Office Network",
+        "contact_info": "Contact Information",
+        "headOffice": {
+            "label": "Thailand Head Office",
+            "company": "Omega Petrotech Co., Ltd.",
+            "address": "Room 2708, 27th Floor, Empire Tower, 1 South Sathorn Road, Yannawa, Sathorn, Bangkok 10120, Thailand"
         },
-        "global_presence": "Global Presence",
+        "actions": {
+            "map": "Open office map",
+            "email": "Email the company",
+            "call": "Call the company"
+        },
+        "links": {
+            "products": "Products and Services",
+            "governance": "About the Organization",
+            "compliance": "Compliance and ESG",
+            "roadmap": "Business Roadmap",
+            "contact": "Contact Us"
+        },
         "locations": {
-            "me": {
-                "label": "Middle East",
-                "address": "Business Bay, Dubai, UAE"
+            "bangkok": {
+                "label": "Head Office",
+                "title": "Bangkok, Thailand",
+                "address": "Empire Tower, South Sathorn Road"
             },
-            "sea": {
-                "label": "Southeast Asia",
-                "address": "Sukhumvit, Bangkok, Thailand"
+            "dubai": {
+                "label": "Partner Network",
+                "title": "Umm Al Quwain, UAE",
+                "address": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone"
             }
         },
-        "contact_info": "Contact Info",
-        "terms": "Terms of Engagement",
+        "contact": {
+            "phoneLabel": "Telephone",
+            "emailLabel": "Email",
+            "email": "info{'@'}omegapetrotech.com",
+            "registrationLabel": "Company Registration"
+        },
+        "terms": "Terms of Use",
         "risk": "Risk Disclosure",
-        "copyright": "© 2026 Omega Petrotech. All Rights Reserved.",
-        "tag1": "Institutional Rigor",
-        "tag2": "Global Connectivity"
+        "copyright": "© {year} OMEGA PETROTECH CO., LTD. ALL RIGHTS RESERVED.",
+        "tag1": "Energy Trading",
+        "tag2": "Responsible Growth"
     },
     "home": {
         "hero": {

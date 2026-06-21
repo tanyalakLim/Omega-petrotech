@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'OMEGA PETROTECH | Premium Energy Trading & Strategic Sourcing' },
         { property: 'og:description', content: 'Global leader in energy sourcing and distribution. Providing high-standard diesel, LNG, and renewable energy solutions for industrial partners worldwide.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:image', content: '/images/hero-vessel.jpg' } // ใส่ path รูปภาพของคุณ
+        { property: 'og:image', content: '/images/content.jpg' } // ใส่ path รูปภาพของคุณ
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/images/omega_logo.png' },

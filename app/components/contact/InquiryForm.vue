@@ -84,6 +84,7 @@
     <!-- Form body -->
     <form
       class="relative z-10 flex flex-1 flex-col space-y-8 px-7 py-8 md:px-10 md:py-10"
+      novalidate
       @submit.prevent="submitForm"
     >
       <!-- Inquiry type -->
@@ -152,8 +153,18 @@
               class="contact-field"
               :placeholder="t(`contact.form.fields.${field.key}.placeholder`)"
               :required="field.required"
+              @blur="touchField(field.key)"
             >
           </div>
+
+          <p
+            v-if="fieldIsInvalid(field.key)"
+            class="mt-2 text-xs font-medium text-red-500 dark:text-red-300"
+          >
+            {{ field.key === 'email' && form.email
+              ? formStatus.invalidEmail
+              : formStatus.required }}
+          </p>
         </div>
       </div>
 
@@ -184,8 +195,26 @@
             class="contact-field resize-none"
             :placeholder="t('contact.form.fields.message.placeholder')"
             required
+            @blur="touchField('message')"
           ></textarea>
         </div>
+
+        <p
+          v-if="fieldIsInvalid('message')"
+          class="mt-2 text-xs font-medium text-red-500 dark:text-red-300"
+        >
+          {{ formStatus.required }}
+        </p>
+      </div>
+
+      <div
+        v-if="errorMessage || successMessage"
+        class="rounded-2xl border px-4 py-3 text-sm font-medium leading-6"
+        :class="successMessage
+          ? 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-400/20 dark:bg-emerald-400/[0.08] dark:text-emerald-200'
+          : 'border-red-200 bg-red-50 text-red-700 dark:border-red-400/20 dark:bg-red-400/[0.08] dark:text-red-200'"
+      >
+        {{ successMessage || errorMessage }}
       </div>
 
       <!-- Footer -->
@@ -232,7 +261,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 interface ContactInquiryPayload {
@@ -245,12 +274,15 @@ interface ContactInquiryPayload {
 }
 
 type ContactFieldKey = 'company' | 'name' | 'email' | 'phone'
+type ContactFormKey = ContactFieldKey | 'type' | 'message'
 
 const emit = defineEmits<{
   submit: [payload: ContactInquiryPayload]
 }>()
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+const recipientEmail = 'info@omegapetrotech.com'
 
 const form = reactive<ContactInquiryPayload>({
   type: '',
@@ -260,6 +292,39 @@ const form = reactive<ContactInquiryPayload>({
   phone: '',
   message: ''
 })
+
+const submitted = ref(false)
+const errorMessage = ref('')
+const successMessage = ref('')
+
+const touched = reactive<Record<ContactFormKey, boolean>>({
+  type: false,
+  company: false,
+  name: false,
+  email: false,
+  phone: false,
+  message: false
+})
+
+const isThai = computed(() => locale.value.startsWith('th'))
+
+const formStatus = computed(() => ({
+  required: isThai.value
+    ? 'กรุณากรอกข้อมูลในช่องนี้'
+    : 'Please complete this field.',
+  completeAll: isThai.value
+    ? 'กรุณากรอกข้อมูลให้ครบทุกช่องก่อนส่ง'
+    : 'Please complete all fields before sending.',
+  invalidEmail: isThai.value
+    ? 'กรุณากรอกอีเมลให้ถูกต้อง'
+    : 'Please enter a valid email address.',
+  success: isThai.value
+    ? 'กำลังเปิดโปรแกรมอีเมล พร้อมใส่ข้อมูลให้แล้ว กรุณาตรวจสอบและกดส่ง'
+    : 'Opening your email app with the inquiry details. Please review and send.',
+  subjectPrefix: isThai.value
+    ? 'Contact Inquiry'
+    : 'Contact Inquiry'
+}))
 
 const inquiryOptions = [
   { value: 'supplier', icon: 'inventory_2' },
@@ -296,12 +361,103 @@ const fields: Array<{
     key: 'phone',
     type: 'tel',
     icon: 'call',
-    required: false
+    required: true
   }
 ]
 
+const requiredFields: ContactFormKey[] = [
+  'type',
+  'company',
+  'name',
+  'email',
+  'phone',
+  'message'
+]
+
+const emailIsValid = computed(() =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)
+)
+
+const touchField = (field: ContactFormKey) => {
+  touched[field] = true
+  errorMessage.value = ''
+  successMessage.value = ''
+}
+
+const markAllTouched = () => {
+  requiredFields.forEach(field => {
+    touched[field] = true
+  })
+}
+
+const fieldIsInvalid = (field: ContactFormKey) => {
+  if (!submitted.value && !touched[field]) {
+    return false
+  }
+
+  if (!form[field]) {
+    return true
+  }
+
+  if (field === 'email') {
+    return !emailIsValid.value
+  }
+
+  return false
+}
+
+const selectedInquiryType = computed(() => {
+  if (!form.type) return ''
+
+  return t(`contact.form.fields.type.options.${form.type}`)
+})
+
+const mailSubject = computed(() =>
+  `${formStatus.value.subjectPrefix} - ${form.company || form.name || 'Website'}`
+)
+
+const mailBody = computed(() => [
+  'Website Contact Inquiry',
+  '',
+  `Inquiry Type: ${selectedInquiryType.value}`,
+  `Company: ${form.company}`,
+  `Name: ${form.name}`,
+  `Email: ${form.email}`,
+  `Phone: ${form.phone}`,
+  '',
+  'Message:',
+  form.message
+].join('\n'))
+
 const submitForm = () => {
+  submitted.value = true
+  errorMessage.value = ''
+  successMessage.value = ''
+  markAllTouched()
+
+  const hasEmptyField = requiredFields.some(field => !form[field])
+
+  if (hasEmptyField) {
+    errorMessage.value = formStatus.value.completeAll
+    return
+  }
+
+  if (!emailIsValid.value) {
+    errorMessage.value = formStatus.value.invalidEmail
+    return
+  }
+
+  const mailtoLink =
+    `mailto:${recipientEmail}`
+    + `?subject=${encodeURIComponent(mailSubject.value)}`
+    + `&body=${encodeURIComponent(mailBody.value)}`
+
   emit('submit', { ...form })
+  successMessage.value = formStatus.value.success
+
+  if (import.meta.client) {
+    window.location.href = mailtoLink
+  }
 }
 </script>
 

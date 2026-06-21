@@ -50,11 +50,11 @@
 
     <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
       <div
-        class="mb-14 grid grid-cols-1 gap-10
+        class="mb-14 grid grid-cols-1 gap-10 justify-evenly
                sm:grid-cols-2 md:mb-20 md:grid-cols-12 md:gap-8 lg:gap-12"
       >
         <!-- Company information -->
-        <div class="sm:col-span-2 md:col-span-5 lg:pr-8">
+        <div class="col-span-8 md:col-span-6 lg:col-span-7  lg:pr-8">
           <NuxtLink
             :to="localePath('/')"
             class="mb-7 inline-flex items-center"
@@ -108,7 +108,7 @@
         </div>
 
         <!-- Quick links -->
-        <nav class="col-span-1 md:col-span-2" :aria-label="t('footer.quick_links')">
+        <nav class="col-span-12 md:col-span-3 lg:col-span-2" :aria-label="t('footer.quick_links')">
           <h5 class="footer-heading">
             {{ t('footer.quick_links') }}
           </h5>
@@ -127,75 +127,8 @@
           </ClientOnly>
         </nav>
 
-        <!-- Office network -->
-        <div class="col-span-1 md:col-span-2">
-          <div class="col-span-1 md:col-span-3">
-          <h5
-            class="mb-6 text-[10px] font-bold uppercase
-                   tracking-[0.2em] text-secondary-container
-                   th:tracking-widest md:mb-10"
-          >
-            {{ $t('footer.network.title') }}
-          </h5>
-
-         
-            <!-- Card Header -->
-            <div
-              class="flex items-start justify-between gap-3"
-            >
-              <div class="flex min-w-0 items-center gap-3">
-
-                <div class="min-w-0">
-                  <span
-                    class="block text-[9px] font-bold uppercase
-                           tracking-[0.14em] text-white/35"
-                  >
-                    {{ $t('footer.network.uae.location') }}
-                  </span>
-
-                  <p class="mt-1 truncate text-xs font-bold text-white/90">
-                    {{ $t('footer.network.uae.label') }}
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Card Content -->
-            <div class="space-y-4 pt-4">
-              <div>
-                <span
-                  class="block text-[9px] font-bold uppercase
-                         tracking-[0.14em] text-white/30"
-                >
-                  {{ $t('footer.network.uae.operatingNameLabel') }}
-                </span>
-
-                <p class="mt-1 text-xs font-semibold text-white/80">
-                  {{ $t('footer.network.uae.company') }}
-                </p>
-              </div>
-
-              <div>
-                <span
-                  class="block text-[9px] font-bold uppercase
-                         tracking-[0.14em] text-white/30"
-                >
-                  {{ $t('footer.network.uae.addressLabel') }}
-                </span>
-
-                <p class="mt-1 text-[11px] font-light leading-5 text-white/50">
-                  {{ $t('footer.network.uae.address') }}
-                </p>
-              </div>
-            </div>
-
-        </div>
-
-        </div>
-
         <!-- Contact and legal -->
-        <div class="col-span-1 sm:col-span-2 md:col-span-3">
+        <div class="col-span-12 md:col-span-2 lg:col-span-3">
           <h5 class="footer-heading">
             {{ t('footer.contact_info') }}
           </h5>
@@ -291,7 +224,7 @@ const googleMapsUrl =
 const quickLinks = [
   { key: 'products', path: '/products' },
   { key: 'governance', path: '/about' },
-  { key: 'compliance', path: '/compliance' },
+  { key: 'compliance', path: { path: '/about', hash: '#compliance' } },
   { key: 'roadmap', path: { path: '/', hash: '#roadmap' } },
   { key: 'contact', path: '/contact' }
 ]

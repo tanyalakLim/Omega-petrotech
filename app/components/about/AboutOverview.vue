@@ -7,7 +7,6 @@
         <!-- Background Effects Component -->
          <!-- Background Elements -->
         <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-            <UiBackgroundEffects />
             
             <ClientOnly>
                 <div class="absolute inset-0 bg-cover bg-center grayscale
@@ -24,10 +23,7 @@
         <!-- Main Content -->
         <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6 lg:px-8">
             <!-- Section Header -->
-            <UiSectionHeader :tag="$t('about.overview.tagline')" :title="$t('about.overview.title')" :desc="$t('about.overview.desc_part1') +
-                $t('about.overview.desc_year') +
-                $t('about.overview.desc_part2')
-                " as="h1" />
+            <UiSectionHeader :tag="$t('about.overview.tagline')" :title="$t('about.overview.title')" :desc="$t('about.overview.desc_part1')" as="h1" />
 
             <!-- Bento Grid -->
             <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12 lg:gap-8">

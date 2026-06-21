@@ -37,8 +37,8 @@
 
     <!-- Header -->
     <header
-      class="relative z-10
-             px-7 pt-7 sm:px-8"
+      class="relative z-10 border-b border-white/[0.08]
+             px-7 py-7 sm:px-8"
     >
       <div class="mb-6 flex items-start justify-between gap-4">
         <div
@@ -83,6 +83,60 @@
 
     <!-- Steps -->
     <div class="relative z-10 flex flex-1 flex-col px-7 py-7 sm:px-8">
+      <div class="relative space-y-3">
+       
+        <div
+          v-for="step in steps"
+          :key="step.id"
+          class="kyc-step group/step"
+        >
+          <span class="kyc-step-number">
+            {{ step.number }}
+          </span>
+
+          <div class="min-w-0 flex-1">
+            <p class="kyc-step-title">
+              {{ t(`contact.kyc.steps.${step.id}`) }}
+            </p>
+          </div>
+
+          <span
+            class="material-symbols-outlined shrink-0 text-[17px]
+                   text-emerald-400 transition-transform duration-300
+                   group-hover/step:scale-110"
+          >
+            check_circle
+          </span>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div
+        class="my-7 grid grid-cols-3 divide-x divide-white/[0.08]
+               rounded-2xl border border-white/[0.08]
+               bg-white/[0.035] py-4"
+      >
+        <div
+          v-for="feature in features"
+          :key="feature.id"
+          class="px-2 text-center"
+        >
+          <span
+            class="material-symbols-outlined block text-[19px]"
+            :class="feature.iconClass"
+          >
+            {{ feature.icon }}
+          </span>
+
+          <span
+            class="mt-1.5 block text-[9px] font-semibold leading-4
+                   text-slate-400"
+          >
+            {{ t(`contact.kyc.features.${feature.id}`) }}
+          </span>
+        </div>
+      </div>
+
       <!-- CTA -->
       <a
         href="#"

@@ -1,22 +1,25 @@
+export type LeadershipGroupId = 'board' | 'executive' | 'advisor'
+
+export interface LeadershipAssignment {
+  groupId: LeadershipGroupId
+  groupLabel: string
+  role: string
+}
+
 export interface LeadershipMember {
   id: string
   name: string
-  role: string
-  displayRole: string
-  type: string
-  firm: string
-  department: string
-  email: string
+  secondaryName?: string
   image?: string
-  bio: string[]
-  expertise: string[]
+  featured?: boolean
+  assignments: LeadershipAssignment[]
+  biography: string[]
 }
 
-export interface LeadershipMemberSource {
-  id: string
-  translationKey: string
-  email: string
-  image?: string
-  bioCount?: number
-  expertiseKeys: string[]
+export interface LeadershipGroup {
+  id: LeadershipGroupId
+  label: string
+  title: string
+  description: string
+  members: LeadershipMember[]
 }

@@ -4,7 +4,7 @@
         "strategic_services": "About Us",
         "leadership": "Leadership",
         "market_insights": "Products",
-        "compliance": "Compliance",
+        "partner": "Partner",
         "contact_us": "Contact Us"
     },
     "footer": {
@@ -12,7 +12,6 @@
         "logoAlt": "Omega Petrotech logo",
         "desc": "Omega Petrotech connects energy sourcing, trading, logistics, and governance to support reliable, transparent, and sustainable regional operations.",
         "quick_links": "Quick Links",
-        "global_presence": "Network",
         "contact_info": "Contact Information",
         "headOffice": {
             "label": "Thailand Head Office",
@@ -30,25 +29,6 @@
             "compliance": "Compliance and ESG",
             "roadmap": "Business Roadmap",
             "contact": "Contact Us"
-        },
-        "locations": {
-            "dubai": {
-                "label": "Network",
-                "title": "Umm Al Quwain, UAE",
-                "address": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone"
-            }
-        },
-        "network": {
-            "title": "Network",
-            "uae": {
-                "location": "Dubai, UAE",
-                "label": "Middle East Network",
-                "operatingNameLabel": "Operating Name",
-                "company": "J.B One Group FZC",
-                "addressLabel": "Office Address",
-                "address": "Al Shmookh Business Center, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, United Arab Emirates",
-                "websiteLabel": "Website"
-            }
         },
         "contact": {
             "phoneLabel": "Telephone",
@@ -142,9 +122,7 @@
         "overview": {
             "tagline": "International Energy Trading House",
             "title": "Omega Petrotech Co., Ltd.",
-            "desc_part1": "Established in",
-            "desc_year": "2025",
-            "desc_part2": "as an international trader of oil, natural gas, and renewable energy. It represents a powerful synergy of a highly qualified board of directors and executive team, rich with extensive experience and expertise in the energy industry and national compliance.",
+            "desc_part1": "Established in 2025 as an international trader of oil, natural gas, and renewable energy. It represents a powerful synergy of a highly qualified board of directors and executive team, rich with extensive experience and expertise in the energy industry and national compliance.",
             "finance": {
                 "label": "Revolving Trade Finance Facility",
                 "desc": "Secured a strategic joint venture partnership with a leading capital group in Dubai, UAE. Driving financial stability through Tier-1 banks such as Emirates NBD and top-tier global financial institutions."
@@ -187,7 +165,7 @@
                     "footerText": "Oil networks across Asia and Middle East."
                 },
                 "ept": {
-                    "title": "Eakorn Petroleums Co., Ltd.",
+                    "title": "Ekkorn Petroleums Co., Ltd.",
                     "description": "Comprised of Thai and international business professionals with long-standing global investor networks. Features executives with profound experience in corporate and international law who have managed transnational oil trade operations.",
                     "footerText": "Manages legal affairs and corporate compliance."
                 }
@@ -239,183 +217,98 @@
         }
     },
     "leadership": {
-        "tag": "Organization Structure",
-        "title": {
-            "part1": "Leadership",
-            "part2": "& Advisory Board"
+        "tag": "Leadership",
+        "title": "Our leaders",
+        "intro": "Meet the directors, senior executives and advisors who support the Group's strategic direction, management, financial stewardship and corporate governance.",
+        "tabsLabel": "Leadership groups",
+        "directoryLabel": "Our leadership",
+        "memberCount": "Members",
+        "memberUnit": "members",
+        "featured": "Chairman",
+        "readBiography": "Read biography",
+        "viewProfile": "View profile",
+        "tabs": {
+            "board": "Board of Directors",
+            "executive": "Executive Committee",
+            "advisor": "Advisor"
         },
-        "organization": {
-            "cSuiteExecutives": "C-Suite Executives"
+        "sections": {
+            "board": {
+                "title": "Board of Directors",
+                "description": "The Board has overall responsibility for the strategic direction and management of the Group, including commercial and financing strategy and stakeholder relations."
+            },
+            "executive": {
+                "title": "Executive Committee",
+                "description": "The Executive Committee brings together the Group's senior functional leaders and is responsible for translating strategic priorities into coordinated business execution."
+            },
+            "advisor": {
+                "title": "Advisor",
+                "description": "The advisory function supports the Group with specialist insight, strategic counsel and external perspective across key areas of business and governance."
+            }
         },
-        "profile": {
-            "title": "Executive Profile",
-            "subtitle": "Omega Petrotech Leadership",
-            "close": "Close executive profile",
-            "active": "Active",
-            "department": "Department",
-            "memberType": "Member Type",
-            "biographyTitle": "Professional Biography",
-            "biographySubtitle": "Background and professional experience",
-            "biographyFallback": "Biography information for this member will be available soon.",
-            "expertiseTitle": "Core Expertise",
-            "expertiseSubtitle": "Leadership and professional capabilities",
-            "contactTitle": "Contact Information",
-            "contactSubtitle": "Professional contact details",
-            "emailAddress": "Email Address"
+        "empty": {
+            "advisorTitle": "Advisor profiles will be added soon",
+            "advisorDescription": "No advisor names were included in the supplied leadership information. This section is ready for approved advisor profiles when they become available."
         },
         "members": {
-            "president": {
+            "kitisak": {
                 "name": "Kitisak Aramrueng",
-                "role": "President",
-                "displayRole": "President",
-                "type": "Executive",
-                "firm": "Omega Petrotech",
-                "department": "Executive Board",
-                "expertise": {
-                    "corporateStrategy": "Corporate Strategy",
-                    "ppp": "Public-Private Partnerships",
-                    "smartCity": "Smart City Development",
-                    "infrastructure": "Urban Infrastructure",
-                    "circularEconomy": "Circular Economy",
-                    "energyServices": "Energy Services"
-                },
+                "secondaryName": "กิติศักดิ์ อร่ามเรือง",
                 "bio": {
                     "paragraph1": "Mr. Kitisak Aramrueng is a distinguished business leader and strategic advisor with nearly four decades of experience spanning engineering, massive-scale urban infrastructure development, and high-level government policy. As President of Omega Petrotech, he brings a vision of sustainable growth backed by a proven track record of managing complex, multi-billion baht enterprises.",
                     "paragraph2": "Prior to joining Omega Petrotech, Mr. Aramrueng served as Chairman of the Board for Krungthep Thanakom, the enterprise arm of the Bangkok Metropolitan Administration. In this crucial role, he steered landmark national projects, including the integration and management of the BTS Green Line mass transit extensions, the development of the Gold Line monorail, and pioneering hazardous waste-to-energy initiatives based on a Zero Waste model. His leadership was instrumental in implementing Bangkok's underground communication cable network and introducing the nation's first electric passenger boat services.",
-                    "paragraph3": "Mr. Aramrueng’s expertise lies at the intersection of technological innovation and corporate strategy. His career began in specialized research and development and electrical engineering, evolving into academia as a Master’s degree curriculum developer in Telecommunications at Assumption University, and later as managing director of IT and communication consulting firms. He has served as a senior Consulting Engineer on vital national projects, including the development of the new Thai Parliament building's automation and ICT systems, and critical command centers for the Royal Thai Police.",
-                    "paragraph4": "Currently, alongside his presidency at Omega Petrotech, Mr. Aramrueng continues to shape development policy as a Senior Advisor to Haier Energy Thailand and as an Advisor to the Deputy Chief of the Chonburi Provincial Administrative Organization. He is a key member of the Sub-Committee on Circular Economy Development under the House of Representatives, guiding national industrial policy toward the BCG, or Bio-Circular-Green, economy model.",
-                    "paragraph5": "Mr. Aramrueng holds a Bachelor of Engineering in Electrical Communications from Rajamangala Institute of Technology. His profound experience in forging Public-Private Partnerships, driving Smart City strategies, and building sustainable business organizations positions Omega Petrotech for exceptional leadership in the changing energy and energy services landscape."
+                    "paragraph3": "Mr. Aramrueng's expertise lies at the intersection of technological innovation and corporate strategy. His career began in specialized R&D and electrical engineering, evolving into academia as a Master's degree curriculum developer in Telecommunications at Assumption University (ABAC), and later, managing director of IT and communication consulting firms. He has served as a senior Consulting Engineer on vital national projects, including the development of the new Thai Parliament building's automation and ICT systems, and critical command centers for the Royal Thai Police.",
+                    "paragraph4": "Currently, alongside his presidency at Omega Petrotech, Mr. Aramrueng continues to shape development policy as a Senior Advisor to Haier Energy (Thailand) and as an Advisor to the Deputy Chief of the Chonburi Provincial Administrative Organization. He is a key member of the Sub-Committee on Circular Economy Development under the House of Representatives, guiding national industrial policy toward the BCG (Bio-Circular-Green) economy model.",
+                    "paragraph5": "Mr. Aramrueng holds a Bachelor of Engineering in Electrical (Communications) from Rajamangala Institute of Technology. His profound experience in forging Public-Private Partnerships (PPP), driving Smart City strategies, and building sustainable business organizations positions Omega Petrotech for exceptional leadership in the changing energy and energy services landscape."
                 }
             },
-            "legal": {
-                "name": "Legal Team Office",
-                "role": "Legal & Compliance",
-                "displayRole": "Legal & Compliance",
-                "type": "Department",
-                "firm": "EPT",
-                "department": "Legal & Regulatory Compliance",
-                "expertise": {
-                    "governance": "Corporate Governance",
-                    "legalAdvisory": "Legal Advisory",
-                    "compliance": "Regulatory Compliance",
-                    "risk": "Risk Management"
-                },
-                "bio": {
-                    "paragraph1": "The Legal and Compliance Department supports the organization through regulatory oversight, corporate governance, risk management, and legal advisory services."
-                }
+            "thanate": {
+                "name": "Thanate Poompo",
+                "secondaryName": "ว่าที่ร้อยตรี ธเนศ พุ่มโพธิ์"
             },
-            "ceo": {
-                "name": "Chief Executive Officer",
-                "role": "Founder • Chief Executive Officer",
-                "displayRole": "Chief Executive Officer (BMI)",
-                "type": "Executive",
-                "firm": "BMI",
-                "department": "Head Office",
-                "expertise": {
-                    "leadership": "Executive Leadership",
-                    "strategy": "Corporate Strategy",
-                    "businessDevelopment": "Business Development"
-                },
-                "bio": {
-                    "paragraph1": "The Chief Executive Officer is responsible for setting corporate strategy, driving business development, and overseeing organizational growth as the Founder and Chief Executive Officer of BMI."
-                }
+            "pattama": {
+                "name": "Pattama Intrakamhaeng",
+                "secondaryName": "ปัฐม อินทรกำแหง"
             },
-            "secretariat": {
-                "name": "Corporate Secretariat",
-                "role": "Company Secretary",
-                "displayRole": "Corporate Secretariat",
-                "type": "Department",
-                "firm": "Head Office",
-                "department": "Secretariat and Corporate Support",
-                "expertise": {
-                    "board": "Board Coordination",
-                    "records": "Corporate Records Management",
-                    "governance": "Corporate Governance Support"
-                },
-                "bio": {
-                    "paragraph1": "The Corporate Secretariat supports the Board of Directors and senior executives through governance coordination, corporate records management, and administrative support."
-                }
+            "atthachai": {
+                "name": "Atthachai Somklin",
+                "secondaryName": "อรรถชัย สมกลิ่น"
             },
-            "cro": {
-                "name": "Chief Executive Officer",
-                "role": "Chief Risk Officer (CRO)",
-                "displayRole": "Risk Management (CRO)",
-                "type": "Employee",
-                "firm": "EPT",
-                "department": "Risk Management",
-                "expertise": {
-                    "enterpriseRisk": "Enterprise Risk Management",
-                    "governance": "Corporate Governance",
-                    "resilience": "Operational Resilience"
-                },
-                "bio": {
-                    "paragraph1": "The Chief Risk Officer oversees enterprise risk management and supports the development of resilient operating and governance frameworks for EPT."
-                }
+            "mark": {
+                "name": "Mark William Fuller"
             },
-            "cfo": {
-                "name": "Chief Executive Officer",
-                "role": "Chief Financial Officer (CFO)",
-                "displayRole": "Financial Management (CFO)",
-                "type": "Employee",
-                "firm": "EPT",
-                "department": "Finance",
-                "expertise": {
-                    "financialStrategy": "Financial Strategy",
-                    "corporateFinance": "Corporate Finance",
-                    "investment": "Investment Planning"
-                },
-                "bio": {
-                    "paragraph1": "The Chief Financial Officer is responsible for financial strategy, corporate planning, financial reporting, and investment oversight for EPT."
-                }
+            "yanisa": {
+                "name": "Yanisa Thaenthong",
+                "secondaryName": "ญาณิศา แท่นทอง"
             },
-            "cpo": {
-                "name": "Chief Executive Officer",
-                "role": "Chief Procurement Officer (CPO)",
-                "displayRole": "Procurement (CPO)",
-                "type": "Contractor",
-                "firm": "BMI",
-                "department": "Procurement",
-                "expertise": {
-                    "sourcing": "Strategic Sourcing",
-                    "procurement": "Procurement Management",
-                    "supplier": "Supplier Management"
-                },
-                "bio": {
-                    "paragraph1": "The Chief Procurement Officer is responsible for strategic sourcing, supplier relationship management, and optimizing BMI’s procurement processes."
-                }
+            "colin": {
+                "name": "Colin James John Clark"
             },
-            "cao": {
-                "name": "Chief Executive Officer",
-                "role": "Chief Administrative Officer (CAO)",
-                "displayRole": "General Administration (CAO)",
-                "type": "Employee",
-                "firm": "JB1",
-                "department": "General Administration",
-                "expertise": {
-                    "administration": "General Administration",
-                    "operations": "Operations Management",
-                    "support": "Corporate Support"
-                },
-                "bio": {
-                    "paragraph1": "The Chief Administrative Officer oversees administration, internal coordination, and corporate support systems for JB1."
-                }
-            },
-            "cmo": {
-                "name": "Chief Executive Officer",
-                "role": "Chief Marketing Officer (CMO)",
-                "displayRole": "Marketing (CMO)",
-                "type": "Employee",
-                "firm": "JB1",
-                "department": "Marketing",
-                "expertise": {
-                    "marketing": "Marketing Strategy",
-                    "brand": "Brand Development",
-                    "communication": "Corporate Communications"
-                },
-                "bio": {
-                    "paragraph1": "The Chief Marketing Officer is responsible for marketing strategy, brand development, marketing communications, and customer engagement initiatives for JB1."
-                }
+            "ekkorn": {
+                "name": "Ekkorn Yingdang",
+                "secondaryName": "เอกกร ยิ่งดัง"
             }
+        },
+        "roles": {
+            "chairman": "Chairman",
+            "chiefExecutiveOfficer": "Chief Executive Officer",
+            "director": "Director",
+            "chiefFinancialOfficer": "Chief Financial Officer",
+            "chiefAdministrativeOfficer": "Chief Administrative Officer",
+            "chiefMarketingOfficer": "Chief Marketing Officer",
+            "chiefRiskOfficer": "Chief Risk Officer",
+            "chiefLegalComplianceOfficer": "Chief Legal & Compliance Department Officer"
+        },
+        "drawer": {
+            "title": "Leadership profile",
+            "eyebrow": "Leadership profile",
+            "subtitle": "Board, executive and advisory appointments",
+            "close": "Close leadership profile",
+            "rolesTitle": "Roles and committees",
+            "rolesSubtitle": "Appointments across the Group's leadership structure",
+            "biographyTitle": "Biography",
+            "biographySubtitle": "Professional background and leadership experience",
+            "sourceNote": "This profile presents the appointments provided in the Board of Directors document. Additional biographical information can be added when approved."
         }
     },
     "products": {
@@ -518,11 +411,44 @@
             }
         }
     },
+    "partner": {
+        "tag": "Partners & Network",
+        "title": {
+            "part1": "Strategic partners",
+            "part2": "ready for future expansion"
+        },
+        "subtitle": "A visual partner page designed to scale as new partners are added through a data-driven structure.",
+        "badge": "Middle East Network",
+        "eyebrow": "Partner Office",
+        "description": "J.B One Group FZC is strategically located in the premier business hub of Umm Al Quwain, positioning us at the crossroads of global trade.",
+        "company": {
+            "label": "Operating Name",
+            "name": "J.B One Group FZC"
+        },
+        "operatingName": {
+            "label": "Operating Name",
+            "value": "J.B One Group FZC"
+        },
+        "officeAddress": {
+            "label": "Office Address",
+            "value": "Al Shmookh Business Center\nOne UAQ, UAQ Free Trade Zone\nUmm Al Quwain, United Arab Emirates"
+        },
+        "website": {
+            "label": "Visit Website jb1asset.com",
+            "url": "https://jb1asset.com"
+        },
+        "office": {
+            "image": "/images/partners/jb-one-fzc-office.svg",
+            "imageAlt": "J.B One Group FZC office"
+
+        }
+    },
     "contact": {
         "tag": "Global Partnerships",
         "title": "Connect With Us",
         "subtitle": "Speak with our team about commercial opportunities, supply partnerships, trade finance, compliance onboarding, and corporate enquiries.",
         "showcase": {
+
             "badge": "Thailand Head Office",
             "company": "Omega Petrotech Co., Ltd.",
             "building": "Empire Tower, Sathorn",
@@ -531,6 +457,11 @@
             "mapTitle": "Company Location",
             "mapAlt": "Map showing the Omega Petrotech office at Empire Tower, Sathorn",
             "addressLabel": "Office Address",
+            "openMap": "Open the office location map in full size",
+            "viewLarge": "View full size",
+            "closeMap": "Close map",
+            "closeHint": "Press ESC or click outside to close",
+            "mapLocation": "Empire Tower · South Sathorn Road",
             "address": {
                 "line1": "Room No. 2708, 27th Floor, Empire Tower",
                 "line2": "1 South Sathorn Road, Yannawa, Sathorn",

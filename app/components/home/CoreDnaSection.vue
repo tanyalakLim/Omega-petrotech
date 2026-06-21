@@ -233,7 +233,7 @@
                    dark:border-slate-700/60"
           >
             <NuxtLink
-              to="/compliance"
+              to="/about"
               class="inline-flex items-center gap-1.5
                      text-xs font-semibold uppercase tracking-wider
                      text-primary/60 transition-colors duration-300

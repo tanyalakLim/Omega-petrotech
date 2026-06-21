@@ -150,7 +150,7 @@ const navigationMenus = [
     { to: '/about', label: 'nav.strategic_services' },
     { to: '/leadership', label: 'nav.leadership' },
     { to: '/products', label: 'nav.market_insights' },
-    { to: '/compliance', label: 'nav.compliance' }
+    { to: '/partner', label: 'nav.partner' }
 ]
 const { t, locale } = useI18n()
 const headerEl = ref<HTMLElement | null>(null)

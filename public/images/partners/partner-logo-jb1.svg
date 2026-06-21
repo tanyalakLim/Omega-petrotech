@@ -1,0 +1,8 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" rx="56" fill="#0B1F3A"/>
+  <circle cx="178" cy="62" r="50" fill="#F59E0B" opacity="0.9"/>
+  <path d="M42 166L82 82H116L76 166H42Z" fill="white"/>
+  <path d="M100 166L140 82H174L134 166H100Z" fill="white" opacity="0.72"/>
+  <path d="M54 184H168" stroke="#F59E0B" stroke-width="12" stroke-linecap="round"/>
+  <text x="120" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="white">JB1</text>
+</svg>

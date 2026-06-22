@@ -72,8 +72,7 @@ const memberDefinitions: MemberDefinition[] = [
     id: 'colin',
     image: '/images/leadership/colin-james-john-clark.jpg',
     groups: {
-      executive: 'chiefFinancialOfficer',
-      financial: 'chiefFinancialOfficer'
+      executive: 'chiefFinancialOfficer'
     }
   },
   {

@@ -1,46 +1,29 @@
 <template>
   <Teleport to="body">
     <Transition name="profile-drawer">
-      <div
-        v-if="member"
-        class="fixed inset-0 z-[180] bg-slate-950/55 backdrop-blur-sm font-ibm-thai"
-        role="dialog"
-        aria-modal="true"
-        :aria-label="t('leadership.drawer.title')"
-        @click.self="$emit('close')"
-      >
-        <aside
-          class="absolute inset-y-0 right-0 flex w-full max-w-[760px]
+      <div v-if="member" class="fixed inset-0 z-[180] bg-slate-950/55 backdrop-blur-sm font-ibm-thai" role="dialog"
+        aria-modal="true" :aria-label="t('leadership.drawer.title')" @click.self="$emit('close')">
+        <aside class="absolute inset-y-0 right-0 flex w-full max-w-[760px]
                  flex-col overflow-hidden bg-white
                  shadow-[-30px_0_100px_rgba(2,6,23,0.28)]
-                 dark:bg-[#08101d]"
-        >
+                 dark:bg-[#08101d]">
           <!-- Drawer header -->
-          <header
-            class="flex items-center justify-between gap-4
+          <header class="flex items-center justify-between gap-4
                    border-b border-slate-200 px-5 py-4
-                   dark:border-white/[0.08] sm:px-7"
-          >
-            <p
-              class="text-[10px] font-black uppercase tracking-[0.2em]
-                     text-secondary-container dark:text-orange-400"
-            >
+                   dark:border-white/[0.08] sm:px-7">
+            <p class="text-[10px] font-black uppercase tracking-[0.2em]
+                     text-secondary-container dark:text-orange-400">
               {{ t('leadership.drawer.eyebrow') }}
             </p>
 
-            <button
-              type="button"
-              class="flex h-11 w-11 items-center justify-center
+            <button type="button" class="flex h-11 w-11 items-center justify-center
                      rounded-full border border-slate-200 bg-slate-50
                      text-slate-500 transition-all duration-300
                      hover:rotate-90 hover:bg-slate-100
                      hover:text-slate-900
                      dark:border-white/10 dark:bg-white/[0.04]
                      dark:text-slate-400 dark:hover:bg-white/[0.08]
-                     dark:hover:text-white"
-              :aria-label="t('leadership.drawer.close')"
-              @click="$emit('close')"
-            >
+                     dark:hover:text-white" :aria-label="t('leadership.drawer.close')" @click="$emit('close')">
               <span class="material-symbols-outlined text-[20px]">
                 close
               </span>
@@ -49,61 +32,38 @@
 
           <div class="drawer-scroll min-h-0 flex-1 overflow-y-auto">
             <!-- Profile intro -->
-            <div
-              class="grid gap-7 border-b border-slate-200 p-6
+            <div class="grid gap-7 border-b border-slate-200 p-6
                      dark:border-white/[0.08]
-                     sm:grid-cols-[190px_minmax(0,1fr)] sm:p-8"
-            >
-              <div
-                class="mx-auto h-[190px] w-[190px] overflow-hidden
+                     sm:grid-cols-[190px_minmax(0,1fr)] sm:p-8">
+              <div class="mx-auto h-[190px] w-[190px] overflow-hidden
                        rounded-full border-[7px] border-white bg-slate-100
                        shadow-[0_24px_55px_-30px_rgba(15,23,42,0.45)]
-                       dark:border-[#101927] dark:bg-slate-900"
-              >
-                <NuxtImg
-                  v-if="member.image"
-                  :src="member.image"
-                  :alt="member.name"
-                  width="560"
-                  height="560"
-                  quality="95"
-                  class="h-full w-full object-cover object-top"
-                />
+                       dark:border-[#101927] dark:bg-slate-900">
+                <img v-if="member.image" :src="member.image" :alt="member.name" width="560" height="560"
+                  class="h-full w-full object-cover object-top" />
 
-                <div
-                  v-else
-                  class="flex h-full w-full items-center justify-center
+                <div v-else class="flex h-full w-full items-center justify-center
                          bg-gradient-to-br from-slate-100 to-slate-200
-                         dark:from-slate-800 dark:to-slate-900"
-                >
-                  <span
-                    class="material-symbols-outlined text-[70px]
-                           text-slate-300 dark:text-slate-600"
-                  >
+                         dark:from-slate-800 dark:to-slate-900">
+                  <span class="material-symbols-outlined text-[70px]
+                           text-slate-300 dark:text-slate-600">
                     person
                   </span>
                 </div>
               </div>
 
               <div class="self-center">
-                <h2
-                  class="text-3xl font-black leading-tight tracking-tight
-                         text-slate-950 dark:text-white"
-                >
+                <h2 class="text-3xl font-black leading-tight tracking-tight
+                         text-slate-950 dark:text-white">
                   {{ member.name }}
                 </h2>
 
-                <p
-                  v-if="member.secondaryName"
-                  class="mt-2 text-sm leading-6
-                         text-slate-500 dark:text-slate-400"
-                >
+                <p v-if="member.secondaryName" class="mt-2 text-sm leading-6
+                         text-slate-500 dark:text-slate-400">
                   {{ member.secondaryName }}
                 </p>
 
-                <div
-                  v-if="profileTitle"
-                  class="mt-4 inline-flex rounded-full
+                <div v-if="profileTitle" class="mt-4 inline-flex rounded-full
                          border border-orange-200/80
                          bg-orange-50 px-3.5 py-1.5
                          text-[11px] font-black uppercase
@@ -111,20 +71,15 @@
                          text-secondary-container
                          dark:border-orange-400/20
                          dark:bg-orange-400/[0.08]
-                         dark:text-orange-300"
-                >
+                         dark:text-orange-300">
                   {{ profileTitle }}
                 </div>
 
                 <div class="mt-6 space-y-2">
-                  <p
-                    v-for="assignment in safeAssignments"
-                    :key="`${member.id}-${assignment.groupId}`"
-                    class="border-l-2 border-secondary-container pl-3
+                  <p v-for="assignment in safeAssignments" :key="`${member.id}-${assignment.groupId}`" class="border-l-2 border-secondary-container pl-3
                            text-sm font-bold leading-6
                            text-slate-700 dark:border-orange-400
-                           dark:text-slate-200"
-                  >
+                           dark:text-slate-200">
                     {{ assignment.role }}
                   </p>
                 </div>
@@ -134,42 +89,29 @@
             <!-- Biography -->
             <div class="p-6 sm:p-8">
               <template v-if="hasDisplayBiography">
-                <p
-                  class="text-[10px] font-black uppercase tracking-[0.18em]
-                         text-slate-400 dark:text-slate-500"
-                >
+                <p class="text-[10px] font-black uppercase tracking-[0.18em]
+                         text-slate-400 dark:text-slate-500">
                   {{ t('leadership.drawer.biographySubtitle') }}
                 </p>
 
-                <h3
-                  class="mt-2 text-2xl font-black
-                         text-slate-950 dark:text-white"
-                >
+                <h3 class="mt-2 text-2xl font-black
+                         text-slate-950 dark:text-white">
                   {{ t('leadership.drawer.biographyTitle') }}
                 </h3>
 
                 <div class="mt-6 space-y-5">
-                  <p
-                    v-for="(paragraph, index) in displayBiography"
-                    :key="`${member.id}-bio-${index}`"
-                    class="text-sm font-light leading-8
-                           text-slate-600 dark:text-slate-300"
-                  >
+                  <p v-for="(paragraph, index) in displayBiography" :key="`${member.id}-bio-${index}`" class="text-sm font-light leading-8
+                           text-slate-600 dark:text-slate-300">
                     {{ paragraph }}
                   </p>
                 </div>
               </template>
 
-              <div
-                v-else
-                class="rounded-2xl border border-dashed border-slate-200
+              <div v-else class="rounded-2xl border border-dashed border-slate-200
                        bg-slate-50 p-5
-                       dark:border-white/10 dark:bg-white/[0.025]"
-              >
-                <p
-                  class="text-[12px] font-light leading-6
-                         text-slate-500 dark:text-slate-400"
-                >
+                       dark:border-white/10 dark:bg-white/[0.025]">
+                <p class="text-[12px] font-light leading-6
+                         text-slate-500 dark:text-slate-400">
                   {{ t('leadership.drawer.sourceNote') }}
                 </p>
               </div>
@@ -299,6 +241,7 @@ onBeforeUnmount(() => {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .profile-drawer-enter-active,
   .profile-drawer-leave-active,
   .profile-drawer-enter-active aside,
